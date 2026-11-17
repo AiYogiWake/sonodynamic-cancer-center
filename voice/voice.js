@@ -63,7 +63,7 @@ const VOICE_PROXY_URL = "";
   function open(){panel.classList.add('open');fab.classList.add('open');fab.setAttribute('aria-expanded','true');
     if(!greeted){greeted=true;
       if(online){const g="Hello, I'm Sona, the sanctuary's voice guide. What brings you here today, and what would you most like to understand?";add(g,'bot');history.push({role:'assistant',content:g})}
-      else{add("The voice guide is coming online soon. In the meantime, Jody, our Lead Concierge, is happy to help on WhatsApp.",'sys');input.disabled=true;micB.disabled=true;form.querySelector('[type=submit]').disabled=true;input.placeholder='Coming online soon…'}}
+      else{add("The voice guide is coming online soon. In the meantime, Jodie, our Lead Concierge, is happy to help on WhatsApp.",'sys');input.disabled=true;micB.disabled=true;form.querySelector('[type=submit]').disabled=true;input.placeholder='Coming online soon…'}}
     setTimeout(()=>{if(!input.disabled)input.focus({preventScroll:true})},50)}
   function close(){stopRec();try{if(canSpeak)speechSynthesis.cancel()}catch(_){}panel.classList.remove('open');fab.classList.remove('open');fab.setAttribute('aria-expanded','false');fab.focus({preventScroll:true})}
   fab.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();panel.classList.contains('open')?close():open()});
@@ -77,7 +77,7 @@ const VOICE_PROXY_URL = "";
       if(!r.ok)throw new Error(j.error||('HTTP '+r.status));
       const reply=(j.reply||'').trim()||"Hmm, the waves swallowed my words. Could you say that once more?";
       w.textContent=reply;history.push({role:'assistant',content:reply});say(reply)}
-    catch(err){w.className='sona-m sys';w.textContent=/429/.test(err.message)?"Let's take a breath together; too many questions at once. Try again in a minute?":"The guide is resting for a moment. Please try again, or WhatsApp Jody."}
+    catch(err){w.className='sona-m sys';w.textContent=/429/.test(err.message)?"Let's take a breath together; too many questions at once. Try again in a minute?":"The guide is resting for a moment. Please try again, or WhatsApp Jodie."}
     finally{busy=false;log.scrollTop=log.scrollHeight}}
   form.addEventListener('submit',e=>{e.preventDefault();ask(input.value)});
   function stopRec(){if(rec&&listening){try{rec.stop()}catch(_){}}listening=false;micB.classList.remove('listening');fab.classList.remove('listening')}
