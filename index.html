@@ -102,14 +102,14 @@ blockquote{font-size:27px;font-style:italic;line-height:1.45;border-left:2px sol
 .pool-hero{margin:60px 0 22px;border:1px solid #D4A24C66;padding:10px}
 .pool-hero img{width:100%;display:block;max-height:640px;object-fit:cover}
 figcaption{font-size:15px;font-style:italic;color:var(--mist);margin-top:10px}
-.estate-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.estate-grid img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;border:1px solid #D4A24C44}
+.beach-wide{margin-top:8px}
+.beach-wide img{width:100%;aspect-ratio:21/9;object-fit:cover;display:block;border:1px solid #D4A24C44}
 .loc{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;margin-top:60px;align-items:start}
 .map{border:1px solid #D4A24C88;padding:8px;height:520px}
 .map iframe{width:100%;height:100%;border:0;filter:grayscale(25%) brightness(.85) contrast(1.05)}
 .infomap{width:100%;margin-top:24px;border:1px solid #D4A24C44;max-height:420px;object-fit:cover;object-position:top}
 /* facilities */
-.fac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.fac-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin-top:40px}.fac{grid-column:span 2}.fac:nth-child(4){grid-column:2/span 2}
 .fac{background:var(--mteal);border:1px solid #D4A24C33}
 .fac .ph{aspect-ratio:4/3;background-size:cover;background-position:center}
 .fac .b{padding:20px 22px 24px}
@@ -175,8 +175,8 @@ footer .logo{margin-bottom:14px}
  nav{display:none}.menu-btn{display:block}
  section{padding:76px 0}
  .doors,.lineage,.mon-grid,.overview-step{grid-template-columns:1fr}
- .fac-grid{grid-template-columns:1fr}
- .estate-grid,.loc{grid-template-columns:1fr}.map{height:360px}.aerial-cap{position:relative;bottom:0;margin-top:-40px}
+ .fac-grid{grid-template-columns:1fr}.fac,.fac:nth-child(4){grid-column:auto}
+ .loc{grid-template-columns:1fr}.beach-wide img{aspect-ratio:4/3}.map{height:360px}.aerial-cap{position:relative;bottom:0;margin-top:-40px}
  .steps4{grid-template-columns:1fr 1fr}
  .flow{padding:28px 20px}
  .fields{grid-template-columns:1fr}.fields .full{grid-column:auto}
@@ -206,11 +206,12 @@ footer .logo{margin-bottom:14px}
 <script src="img/ay-lamas-retreat-preparation.js"></script>
 <script src="img/ay-lopon-outdoors.js"></script>
 <script src="img/ay-shenten-pemf-session.js"></script>
+<script src="img/ay-swami-beach-dawn.js"></script>
 <script src="img/mf-aerial-property.js"></script>
-<script src="img/mf-balcony-pools-gulf.js"></script>
+<script src="img/mf-beach-sunset.js"></script>
+<script src="img/mf-float-tank.js"></script>
 <script src="img/mf-grotto-sauna.js"></script>
 <script src="img/mf-gym-luxury.js"></script>
-<script src="img/mf-overhead-pools-exterior.js"></script>
 <script src="img/mf-pools-sunset.js"></script>
 </head>
 <body>
@@ -233,8 +234,8 @@ footer .logo{margin-bottom:14px}
 
 <section><div class="wrap">
  <div class="doors">
-  <a class="door" href="#monastic"><div class="img" style="background-image:url(#img-ay-karma-monastery)"></div><span class="tag">Free for monastics</span><span class="eyebrow">For Monastics</span><h2>Care for those who gave their lives to practice.</h2><p>Ordained monks, nuns, and lifelong renunciates may inquire about free care in residence.</p><span class="go">Inquire freely →</span></a>
-  <a class="door" href="#signup"><div class="img" style="background-image:url(#img-02-sound-bath-chamber)"></div><span class="eyebrow">For Everyone Else</span><h2>Your first treatment, step by step.</h2><p>Begin with a simple overview, then request your first SoSDT session. This is a request, not a booking.</p><span class="go">Begin the journey →</span></a>
+  <a class="door" href="#monastic"><div class="img" style="background-image:url(#img-ay-swami-beach-dawn)"></div><span class="tag">Free for monastics</span><span class="eyebrow">For Monastics</span><h2>Care for those who gave their lives to practice.</h2><p>Ordained monks, nuns, and lifelong renunciates may inquire about free care in residence.</p><span class="go">Inquire freely →</span></a>
+  <a class="door" href="#signup"><div class="img" style="background-image:url(#img-03c-sensitizer-to-bath)"></div><span class="eyebrow">For Everyone Else</span><h2>Your first treatment, step by step.</h2><p>Begin with a simple overview, then request your first SoSDT session. This is a request, not a booking.</p><span class="go">Begin the journey →</span></a>
  </div>
 </div></section>
 
@@ -262,23 +263,18 @@ footer .logo{margin-bottom:14px}
 
 <div class="journey-intro" id="journey"><div class="wrap center"><span class="eyebrow">How SoSDT works</span><h2>The Dolphin Sonar Journey</h2><p style="max-width:680px;margin:0 auto">A visual meditation on how SoSDT works: sound, light, and the body's own lamps.</p></div></div>
 <div class="journey">
- <div class="scene"><div class="bg" style="background-image:url(#img-01-hero-dolphins-sonar)"></div><div class="wrap"><div class="txt"><span class="num">SCENE I</span><h2>The Ocean Listens</h2><p>Far beneath the surface, dolphins speak in rings of sound. Every click is a question, and every echo an answer.</p></div></div></div>
- <div class="scene" id="sens"><div class="bg" id="sensbg" style="background-image:url(#img-03a-sensitizer-sublingual)"></div><div class="wrap"><div class="txt"><span class="num">SCENE II</span><h2>The Sensitizer Is Received</h2><div class="toggle"><button class="on" data-img="#img-03a-sensitizer-sublingual">Sublingual tablet</button><button data-img="#img-03b-sensitizer-iv">IV infusion</button></div><p>Depending on your protocol it is a small tablet dissolved under the tongue, or a gentle IV infusion while you rest. Like light carried on a river, it travels toward the cells.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-03c-sensitizer-to-bath)"></div><div class="wrap"><div class="txt"><span class="num">SCENE III</span><h2>The Waiting Hours</h2><p>Then you wait in stillness. The path of light winds toward the bath. Many people sit in practice or walk the turtle beach during this time.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-02-sound-bath-chamber)"></div><div class="wrap"><div class="txt"><span class="num">SCENE IV</span><h2>The Sound Bath</h2><p>You rest in the sound chamber while bowls and mantra hold the room, and our clinical team guides the focused-sound session.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-04-dolphin-sonar-beam)"></div><div class="wrap"><div class="txt"><span class="num">SCENE V</span><h2>The Focused Echo</h2><p>Like a dolphin's sonar, focused ultrasound gathers gentle sound to one point. It awakens the sensitizer only where the sound converges.</p></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-05-mitochondria-glow)"></div><div class="wrap"><div class="txt"><span class="num">SCENE VI</span><h2>The Lamps Within</h2><p>Inside every cell, mitochondria are the lamps. When sound awakens the sensitizer, it acts here, on the lamps of the cells that have lost their way.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-06-cells-into-light)"></div><div class="wrap"><div class="txt"><span class="num">SCENE VII</span><h2>Into Light</h2><p>In this vision, focused sound meets the cells that have lost their way and releases them into light, while the healthy tissue around them rests.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene" id="sens"><div class="bg" id="sensbg" style="background-image:url(#img-03a-sensitizer-sublingual)"></div><div class="wrap"><div class="txt"><span class="num">SCENE I</span><h2>The Sensitizer Is Received</h2><div class="toggle"><button class="on" data-img="#img-03a-sensitizer-sublingual">Sublingual tablet</button><button data-img="#img-03b-sensitizer-iv">IV infusion</button></div><p>Depending on your protocol it is a small tablet dissolved under the tongue, or a gentle IV infusion while you rest. Like light carried on a river, it travels toward the cells while you rest in stillness, sit in practice, or walk the turtle beach.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-02-sound-bath-chamber)"></div><div class="wrap"><div class="txt"><span class="num">SCENE II</span><h2>The Sound Bath</h2><p>You rest in the sound chamber while bowls and mantra hold the room, and our clinical team guides the focused-sound session.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-04-dolphin-sonar-beam)"></div><div class="wrap"><div class="txt"><span class="num">SCENE III</span><h2>The Focused Echo</h2><p>Like a dolphin's sonar, focused ultrasound gathers gentle sound to one point. It awakens the sensitizer only where the sound converges.</p></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-05-mitochondria-glow)"></div><div class="wrap"><div class="txt"><span class="num">SCENE IV</span><h2>The Lamps Within</h2><p>Inside every cell, mitochondria are the lamps. When sound awakens the sensitizer, it acts here, on the lamps of the cells that have lost their way.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-06-cells-into-light)"></div><div class="wrap"><div class="txt"><span class="num">SCENE V</span><h2>Into Light</h2><p>In this vision, focused sound meets the cells that have lost their way and releases them into light, while the healthy tissue around them rests.</p><span class="art">Artistic visualization</span></div></div></div>
 </div>
 
 <section class="estate" id="estate">
  <div class="aerial"><img data-k="mf-aerial-property" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Aerial view of the Manasota Key estate: private beach, Gulf of Mexico, 1-acre grounds"><div class="aerial-cap wrap"><span class="eyebrow">The Estate · Manasota Key</span><h2>Between the Gulf and Lemon Bay.</h2><p>One full acre of private grounds on a protected, dolphin-visited turtle beach. Three pools, Bali-inspired architecture, and a 12-foot concrete rise built on 49 pilings.</p></div></div>
  <div class="wrap">
   <figure class="pool-hero"><img data-k="mf-pools-sunset" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The outdoor zen pools at golden hour, with palms and the Gulf beyond"><figcaption>The outdoor pools at golden hour, including the saltwater ozone pool. <span class="real">Real photo · on site</span></figcaption></figure>
-  <div class="estate-grid">
-   <figure><img data-k="mf-overhead-pools-exterior" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Overhead view of the pools, pavilion and tropical gardens"><figcaption>Overhead: pools, pavilion, and gardens. <span class="real">Real photo</span></figcaption></figure>
-   <figure><img data-k="mf-balcony-pools-gulf" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="View from the balcony over the pools and gardens to the Gulf"><figcaption>From the balcony: pools, palms, and the Gulf. <span class="real">Real photo</span></figcaption></figure>
-  </div>
+  <figure class="beach-wide"><img data-k="mf-beach-sunset" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The turtle-nesting beach at sunset on Manasota Key"><figcaption>The turtle-nesting beach at sunset, where dolphins pass close to shore. <span class="real">Real photo</span></figcaption></figure>
   <div class="loc">
    <div class="map"><iframe title="Map of Manasota Key and Englewood, on Florida's Gulf Coast" src="https://maps.google.com/maps?ll=26.95,-82.37&amp;z=12&amp;t=k&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
    <div class="loc-info">
@@ -305,8 +301,7 @@ footer .logo{margin-bottom:14px}
   <div class="fac"><div class="ph" style="background-image:url(#img-08-facilities-collage);background-position:0 0;background-size:200%"></div><div class="b"><span class="real" style="color:var(--copper)">Artistic visualization · real photo needed</span><h3>Hyperbaric Chamber</h3><p>Oxygen under gentle pressure, a natural partner to SoSDT, which works through oxygen inside the cells.</p><span class="ph-note">[placeholder: real H-bot photo, chamber type, supervision]</span></div></div>
   <div class="fac"><div class="ph" style="background-image:url(#img-mf-grotto-sauna)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Two Saunas &amp; the Grotto</h3><p>Two saunas, including the sauna/gym/media room, and the lantern-lit grotto.</p></div></div>
   <div class="fac"><div class="ph" style="background-image:url(#img-ay-shenten-pemf-session)"></div><div class="b"><span class="real">Real photo · Shenten Dargye Ling</span><h3>PEMF</h3><p>Pulsed electromagnetic field sessions, gentle fields that support rest and recovery.</p><span class="ph-note">[placeholder: confirm a PEMF unit is installed on site]</span></div></div>
-  <div class="fac"><div class="ph" style="background-image:url(#img-mf-pools-sunset)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Pools &amp; Grounds</h3><p>Three pools including a saltwater ozone pool, a zen garden, and an oceanfront turtle beach.</p></div></div>
-  <div class="fac"><div class="ph" style="background-image:url(#img-02-sound-bath-chamber)"></div><div class="b"><span class="real" style="color:var(--copper)">Artistic visualization</span><h3>The Sound Chamber</h3><p>Where SoSDT sessions are envisioned, with bowls, still water, and silence.</p><span class="ph-note">[placeholder: real room &amp; device]</span></div></div>
+  <div class="fac"><div class="ph" style="background-image:url(#img-mf-float-tank)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Float Suite &amp; Grounds</h3><p>A sensory-deprivation float suite in total darkness and silence, plus three pools, a zen garden, and the turtle beach.</p></div></div>
  </div>
 </div></section>
 
@@ -332,7 +327,7 @@ footer .logo{margin-bottom:14px}
   <div class="progress" id="prog"></div>
 
   <div class="step on" data-t="Overview">
-   <div class="overview-step"><img data-k="07-overview-infographic" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Overview infographic"><div><h3>Before you begin</h3><p style="font-size:18px">Sensitizer → Sonar → Bath → Return. A coordinator will contact you to welcome you, answer your questions, and shape your first visit.</p></div></div>
+   <div class="overview-step" style="grid-template-columns:1fr"><div><h3>Before you begin</h3><p style="font-size:18px">Sensitizer → Sonar → Bath → Return. A coordinator will contact you to welcome you, answer your questions, and shape your first visit.</p></div></div>
   </div>
 
   <div class="step" data-t="About you">
