@@ -304,6 +304,20 @@ footer .logo{margin-bottom:14px}
 .refs ol{font-family:Inter;font-size:13px;line-height:1.6;color:var(--mist);max-width:980px;margin:24px auto 0;padding-left:22px}
 .refs li{margin-bottom:8px}.refs a{color:var(--aqua);word-break:break-all}
 @media (max-width:900px){.team-grid,.hyp-grid{grid-template-columns:1fr}.cascade{grid-template-columns:1fr 1fr}.cs-hero h1{font-size:40px}}
+
+/* founders (draft) */
+.founder-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px}
+.fbadge{display:block;font-family:Inter;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.fbadge .ph{letter-spacing:0;text-transform:none}
+.ph-photo.house{background:radial-gradient(#0E1433,#040A10 70%)}
+.ph-photo.portrait{position:relative;border-style:dashed}
+.ph-photo.portrait .slot{position:absolute;bottom:22px;left:0;right:0;font-family:Inter;font-size:9.5px;color:#F0A15B}
+.fcard-jody{border-color:#D4A24C;box-shadow:0 0 0 1px #D4A24C33,0 20px 50px #0008;background:linear-gradient(#0E1433f0,#0B2A35f0)}
+.tcard p.small{font-family:Inter;font-size:12px;color:var(--mist)}
+.anchor-alias{position:relative;top:-84px;display:block;height:0}
+@media (max-width:1100px){.founder-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.founder-grid{grid-template-columns:1fr}}
+.footfounders{font-family:Inter;font-size:12px;color:var(--mist);margin-top:6px}
 </style>
 <script>window.IMG={};</script>
 <script src="img/01-hero-dolphins-sonar.js"></script>
@@ -315,9 +329,10 @@ footer .logo{margin-bottom:14px}
 <script src="img/cs-sosdt4life-team.js"></script>
 </head>
 <body data-page="story">
+
 <header><div class="wrap">
  <a class="logo" href="index.html"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" stroke="#D4A24C" stroke-width="1.3"><circle cx="20" cy="20" r="3" fill="#D4A24C"/><path d="M20 4c6 6 6 14 0 20-6-6-6-14 0-20z"/><path d="M36 20c-6 6-14 6-20 0 6-6 14-6 20 0z" transform="rotate(0 20 20)"/><path d="M4 20c6-6 14-6 20 0-6 6-14 6-20 0z"/><path d="M20 36c-6-6-6-14 0-20 6 6 6 14 0 20z"/><circle cx="20" cy="20" r="17" opacity=".5"/></svg><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
- <nav id="mainnav" aria-label="Main"><a class="nv-top" href="index.html">Home</a><div class="nv-g"><a class="nv-top" href="index.html#journey">The Process</a><button class="nv-tg" aria-label="Show The Process links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#journey">Dolphin Sonar Journey</a><a href="index.html#facilities">Facilities</a><a href="index.html#signup">First Treatment</a></div></div><div class="nv-g" data-g="story"><a class="nv-top" href="creation-story.html">Our Story</a><button class="nv-tg" aria-label="Show Our Story links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="creation-story.html">Creation Story</a><a href="creation-story.html#team">Dr. Wang &amp; Team</a><a href="creation-story.html#research">Research Timeline</a><a href="index.html#lineage">Our Lineage</a></div></div><div class="nv-g"><a class="nv-top" href="index.html#monastic">Care</a><button class="nv-tg" aria-label="Show Care links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#monastic">Monastic Care</a><a href="index.html#passage">Conscious Passage</a></div></div><div class="nv-g"><a class="nv-top" href="index.html#estate">Places</a><button class="nv-tg" aria-label="Show Places links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#estate">The Estate · Location</a><a href="index.html#sister">Sister Centers</a></div></div><a class="nv-top" href="index.html#faq">FAQ</a><a class="nv-top" href="index.html#contact">Contact</a><a class="nv-top nv-cta" href="index.html#signup">First Treatment</a></nav>
+ <nav id="mainnav" aria-label="Main"><a class="nv-top" href="index.html">Home</a><div class="nv-g"><a class="nv-top" href="index.html#journey">The Process</a><button class="nv-tg" aria-label="Show The Process links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#journey">Dolphin Sonar Journey</a><a href="index.html#facilities">Facilities</a><a href="index.html#signup">First Treatment</a></div></div><div class="nv-g" data-g="story"><a class="nv-top" href="creation-story.html">Our Story</a><button class="nv-tg" aria-label="Show Our Story links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="creation-story.html">Creation Story</a><a href="creation-story.html#founders">Founders Team</a><a href="creation-story.html#research">Research Timeline</a><a href="index.html#lineage">Our Lineage</a></div></div><div class="nv-g"><a class="nv-top" href="index.html#monastic">Care</a><button class="nv-tg" aria-label="Show Care links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#monastic">Monastic Care</a><a href="index.html#passage">Conscious Passage</a></div></div><div class="nv-g"><a class="nv-top" href="index.html#estate">Places</a><button class="nv-tg" aria-label="Show Places links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#estate">The Estate · Location</a><a href="index.html#sister">Sister Centers</a></div></div><a class="nv-top" href="index.html#faq">FAQ</a><a class="nv-top" href="index.html#contact">Contact</a><a class="nv-top nv-cta" href="index.html#signup">First Treatment</a></nav>
  <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
 </div></header>
 
@@ -336,7 +351,7 @@ footer .logo{margin-bottom:14px}
  <p>Healing traditions find one another. AiYogi, AiYogiLAB and ARDTiLYS were built around a simple Dzogchen insight: the mind rests best when the body is held in kindness. When that path crossed Dr. Wang's, both sides recognized the same intention. One brought the science of sound; the other brought the sanctuary, the meditation, and a lineage of compassionate care. <span class="ph">[placeholder: the owner's account of how and when AiYogi / AiYogiLAB / ARDTiLYS first met Dr. Wang]</span></p>
  <p>Out of that meeting came the Sonodynamic Cancer Center at AiYogi.ai Lab: Dr. Wang's protocol in a Dzogchen Florida recovery sanctuary on Manasota Key, offered free of charge to monastics.</p>
  <span class="chapter" id="growth">Chapter III</span><h2>The pod</h2>
- <p>Dolphins never travel alone. Our vision is a worldwide family of SDT centers that share one protocol, one standard of tenderness, and one sound, each rooted in its own landscape. Jody, our lead concierge, is helping that pod grow from shore to shore.</p>
+ <p>Dolphins never travel alone. Our vision is a worldwide family of SDT centers that share one protocol, one standard of tenderness, and one sound, each rooted in its own landscape. Jody, a member of our Founders Team and our lead concierge, is the one who guides the pod across oceans, listening ahead for each new shore where a center can take root.</p>
 </div>
  <figure class="origin-fig" style="max-width:1080px"><img data-k="12-global-dolphin-pod-network" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artistic map of a golden dolphin-pod network"><figcaption>Artistic visualization; node positions are symbolic.</figcaption></figure>
  <div class="sis-grid">
@@ -347,22 +362,29 @@ footer .logo{margin-bottom:14px}
  <p class="center" style="margin-top:22px"><a class="go-link" href="index.html#sister">Our sister locations →</a></p>
 </div></section>
 
-<section class="team" id="team"><div class="wrap">
- <div class="center"><span class="eyebrow">The Team</span><h2>The people behind the sound</h2></div>
- <div class="team-grid">
-  <div class="tcard"><div class="ph-photo"><img data-k="cs-dr-xiaohuai-wang" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Prof. Dr. Xiaohuai Wang"></div>
+<section class="team founders" id="founders"><span id="team" class="anchor-alias"></span><div class="wrap">
+ <div class="center"><span class="eyebrow">Founders Team</span><h2>The Founders Team: those who listened together</h2>
+ <p style="max-width:720px;margin:0 auto">A lineage house, a physician, a researcher, and the one who guides the pod across oceans: four who heard the same quiet signal and answered it together.</p></div>
+ <div class="founder-grid">
+  <div class="tcard fcard-house"><span class="fbadge">Founding House</span><div class="ph-photo house"><svg viewBox="0 0 40 40" width="62" height="62" fill="none" stroke="#D4A24C" stroke-width="1.2" aria-hidden="true"><circle cx="20" cy="20" r="3" fill="#D4A24C"/><path d="M20 4c6 6 6 14 0 20-6-6-6-14 0-20z"/><path d="M36 20c-6 6-14 6-20 0 6-6 14-6 20 0z"/><path d="M4 20c6-6 14-6 20 0-6 6-14 6-20 0z"/><path d="M20 36c-6-6-6-14 0-20 6 6 6 14 0 20z"/><circle cx="20" cy="20" r="17" opacity=".5"/></svg></div>
+   <h3>AiYogi · AiYogiLAB · ARDTiLYS</h3><div class="role">Lineage · Sanctuary · Vision</div>
+   <p>The Dzogchen Florida house that holds the sanctuary on Manasota Key, the lineage of sound, and the vision of a worldwide family of SDT centers, offered freely to monastics.</p>
+   <div class="src"><span class="ph">[placeholder: founder name(s) and titles to show for the house]</span></div></div>
+  <div class="tcard"><span class="fbadge">Founding Physician</span><div class="ph-photo"><img data-k="cs-dr-xiaohuai-wang" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Prof. Dr. Xiaohuai Wang"></div>
    <h3>Prof. Dr. Xiaohuai Wang</h3><div class="role">M.D. · Principal · SDT pioneer</div>
    <ul><li>40+ years in clinical oncology</li><li>Inventor of the SDT ultrasound bath</li><li>MSc and MD, Fourth Military Medical University, Xi'an; Visiting Scholar, MD Anderson</li><li>Former Director of Oncology, Guangzhou Military Hospital</li></ul>
    <div class="src">Bio per SoSDT 4 LIFE (cancertherapies.cc/our-team). Photo: cancertherapies.cc</div></div>
-  <div class="tcard"><div class="ph-photo"><b>LQ</b></div>
+  <div class="tcard"><span class="fbadge">Founding Research Partner <span class="ph">[placeholder: confirm]</span></span><div class="ph-photo"><b>LQ</b></div>
    <h3>Dr. Lucy Qing Li</h3><div class="role">PhD · Research partner</div>
    <p>Long-time research partner of Prof. Wang. She is a co-author of the 2012 refractory breast cancer report, first author of the 2014 esophageal and gastric study, and corresponding author of the 2020 pancreas case report (College of Engineering and Science, Victoria University, Melbourne).</p>
    <div class="src">Per the published papers <sup>[<a href="#r5">5</a>, <a href="#r6">6</a>, <a href="#r7">7</a>]</sup>. <span class="ph">[placeholder: photo · current title]</span></div></div>
-  <div class="tcard"><div class="ph-photo"><b>J</b></div>
-   <h3>Jody</h3><div class="role">Lead Concierge · Partner in worldwide growth</div>
-   <p>Jody is your first voice and steady hand. She guides guests and monastics from the first message to the first treatment, and partners with Dr. Wang in bringing SDT centers to new shores around the world.</p>
+  <div class="tcard fcard-jody"><span class="fbadge">Founder <span class="ph">[placeholder: founder title]</span></span>
+   <div class="ph-photo portrait"><b>J</b><span class="slot">[placeholder: portrait]</span></div>
+   <h3>Jody</h3><div class="role">Lead Concierge · Partner in the growth of worldwide SDT centers</div>
+   <p>Every pod has one who swims ahead, listening for the way. Jody is that voice for our circle. She is the first person you meet and the one who guides you from a first message to a first treatment. As our partner in growing SDT centers around the world, she carries the signal from shore to shore.</p>
+   <p class="small">Australian contact for SoSDT 4 LIFE (cancertherapies.cc).</p>
    <a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jody (Lead Concierge)</span></a>
-   <div class="src"><span class="ph">[placeholder: photo · short bio]</span></div></div>
+   <div class="src"><span class="ph">[placeholder: short bio · photo]</span></div></div>
  </div>
 </div></section>
 
@@ -429,7 +451,8 @@ footer .logo{margin-bottom:14px}
 
 <footer><div class="wrap">
  <a class="logo" href="index.html#top"><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
- <p>A Dzogchen Florida recovery sanctuary · A program of ARDTiLYS with AiYogi &amp; AiYogiLAB <span class="ph">[placeholder: legal entity]</span><br>Manasota Key, on Florida's Gulf Coast · DzogchenFlorida.com · ManasotaFortress.com · AiYogi.ai<br><span class="flinks"><a href="index.html#top">Home</a> · <a href="index.html#journey">The Process</a> · <a href="creation-story.html">Creation Story</a> · <a href="creation-story.html#team">Dr. Wang &amp; Team</a> · <a href="index.html#monastic">Monastic Care</a> · <a href="index.html#passage">Conscious Passage</a> · <a href="index.html#estate">The Estate</a> · <a href="index.html#sister">Sister Centers</a> · <a href="index.html#faq">FAQ</a> · <a href="index.html#contact">Contact</a> · <a href="index.html#signup">First Treatment</a></span><br><a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jody (Lead Concierge)</span></a> · Privacy · Terms <span class="ph">[placeholder]</span></p>
+ <p>A Dzogchen Florida recovery sanctuary · A program of ARDTiLYS with AiYogi &amp; AiYogiLAB <span class="ph">[placeholder: legal entity]</span><br>Manasota Key, on Florida's Gulf Coast · DzogchenFlorida.com · ManasotaFortress.com · AiYogi.ai<br><span class="flinks"><a href="index.html#top">Home</a> · <a href="index.html#journey">The Process</a> · <a href="creation-story.html">Creation Story</a> · <a href="creation-story.html#founders">Founders Team</a> · <a href="index.html#monastic">Monastic Care</a> · <a href="index.html#passage">Conscious Passage</a> · <a href="index.html#estate">The Estate</a> · <a href="index.html#sister">Sister Centers</a> · <a href="index.html#faq">FAQ</a> · <a href="index.html#contact">Contact</a> · <a href="index.html#signup">First Treatment</a></span><br><a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jody (Lead Concierge)</span></a> · Privacy · Terms <span class="ph">[placeholder]</span></p>
+ <p class="footfounders">Founded by AiYogi · AiYogiLAB · ARDTiLYS, Prof. Dr. Xiaohuai Wang, Dr. Lucy Qing Li and Jody <span class="ph">[placeholder: confirm founder list]</span></p>
  <p class="footline">SoSDT is offered as an integrative therapy; individual results vary.</p>
 </div></footer>
 <script id="navjs">
