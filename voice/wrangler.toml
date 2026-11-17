@@ -1,0 +1,18 @@
+name = "sona-voice"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://aiyogiwake.github.io"
+XAI_MODEL = "grok-4.7"
+
+# Cloudflare Workers Rate Limiting binding: 20 requests per 60 s per IP.
+# namespace_id is any account-unique positive integer you choose.
+[[ratelimits]]
+name = "VOICE_RL"
+namespace_id = "7301"
+  [ratelimits.simple]
+  limit = 20
+  period = 60
+
+# Secret (never commit): set with  wrangler secret put XAI_API_KEY
