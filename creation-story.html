@@ -43,7 +43,7 @@ nav a{text-decoration:none}
 .nv-dd a{display:block;padding:10px 18px;font-family:Inter;font-size:13.5px;color:var(--parch);letter-spacing:.02em}
 .nv-dd a:hover,.nv-dd a.active{color:var(--gold);background:#D4A24C14}
 .nv-dd a.active::before{content:"◆ ";font-size:9px;color:var(--gold)}
-.menu-btn{display:none;background:none;border:1px solid #D4A24C66;width:44px;height:40px;padding:10px;cursor:pointer;flex-direction:column;justify-content:space-between}
+.menu-btn{touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-appearance:none;appearance:none;display:none;background:none;border:1px solid #D4A24C66;width:44px;height:40px;padding:10px;cursor:pointer;flex-direction:column;justify-content:space-between}
 .menu-btn span{display:block;height:1.5px;background:var(--gold);transition:.25s}
 header.open .menu-btn span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
 header.open .menu-btn span:nth-child(2){opacity:0}
@@ -218,22 +218,24 @@ details p{margin-top:10px;font-size:18px;color:#d6cfc1}
 footer{padding:50px 0 80px;font-family:Inter;font-size:13px;color:var(--mist)}
 footer .logo{margin-bottom:14px}
 .ph{font-family:Inter;font-size:12px;color:var(--copper)}
-.sticky{position:fixed;right:20px;bottom:20px;z-index:60;display:none}
 .mock-banner{position:fixed;left:0;bottom:0;z-index:70;font-family:Inter;font-size:10.5px;background:#7A1F2B;color:#fff;padding:4px 10px;letter-spacing:.06em}
 @media (max-width:860px){
  .l1{font-size:10.5px;letter-spacing:.1em}.l2{font-size:13px}.logo svg{width:24px}
  body{font-size:18px}
  .menu-btn{display:flex;position:relative;z-index:62}
- nav{position:fixed;inset:0;z-index:61;background:#040A10;flex-direction:column;align-items:stretch;gap:0;padding:86px 28px 40px;overflow-y:auto;opacity:0;visibility:hidden;transition:.25s}
+ nav{position:fixed;top:0;right:0;bottom:0;left:0;height:100vh;height:100dvh;z-index:61;-webkit-overflow-scrolling:touch;background:#040A10;flex-direction:column;align-items:stretch;gap:0;padding:86px 28px 40px;overflow-y:auto;opacity:0;visibility:hidden;transition:.25s}
  header.open nav{opacity:1;visibility:visible}
  .nv-top{font-size:15px;padding:14px 0;border-bottom:1px solid #D4A24C22!important}
  .nv-g{flex-wrap:wrap}.nv-g>.nv-top{flex:1}
  .nv-tg{padding:14px 6px;border-bottom:1px solid #D4A24C22}
  .nv-dd{position:static;opacity:1;visibility:visible;transform:none;display:none;box-shadow:none;border:0;border-left:1px solid #D4A24C55;margin:6px 0 10px 4px;min-width:0;width:100%;background:none}
- .nv-g.open .nv-dd{display:block}
+ .nv-dd,.nv-g.open .nv-dd{display:block}
+ .nv-tg{display:none}
+ .nv-g>.nv-top{border-bottom:0!important;padding-bottom:4px}
+ .nv-dd a{padding:9px 14px;font-size:15px}
  .nv-cta{margin:20px 0 0;text-align:center}
  body.menu-open{overflow:hidden}
- body.menu-open .sticky,body.menu-open .sona-fab,body.menu-open .sona-panel{display:none!important}
+ body.menu-open .sona-fab,body.menu-open .sona-panel{display:none!important}
  header.open{background:#040A10}
  section{padding:76px 0}
  .doors,.lineage,.mon-grid,.overview-step{grid-template-columns:1fr}
@@ -245,11 +247,10 @@ footer .logo{margin-bottom:14px}
  .flow{padding:28px 20px}
  .fields{grid-template-columns:1fr}.fields .full{grid-column:auto}
  .pr{font-size:0;color:transparent}.pr.cur{font-size:10px;color:var(--gold);white-space:nowrap}
- .hero{align-items:flex-end}
+ .hero{align-items:flex-end;padding-top:110px}
  .hero .bg{background-position:68% center}
  .hero::after{background:linear-gradient(0deg,#040A10 18%,#040A10c0 55%,#040A1040)}
  .rings{left:70%;top:36%}
- .sticky{display:block}
  .scene{min-height:80vh}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -432,7 +433,7 @@ footer .logo{margin-bottom:14px}
  <p class="footline">SoSDT is offered as an integrative therapy; individual results vary.</p>
 </div></footer>
 <script id="navjs">
-(function(){const h=document.querySelector('header'),mb=document.querySelector('.menu-btn'),nav=document.getElementById('mainnav');
+(function(){try{const h=document.querySelector('header'),mb=document.querySelector('.menu-btn'),nav=document.getElementById('mainnav');
 const close=()=>{h.classList.remove('open');document.body.classList.remove('menu-open');mb.setAttribute('aria-expanded','false')};
 mb.addEventListener('click',()=>{const o=h.classList.toggle('open');document.body.classList.toggle('menu-open',o);mb.setAttribute('aria-expanded',o)});
 nav.querySelectorAll('.nv-tg').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();const g=b.parentElement,o=!g.classList.contains('open');nav.querySelectorAll('.nv-g.open').forEach(x=>x!==g&&x.classList.remove('open'));g.classList.toggle('open',o);b.setAttribute('aria-expanded',o)}));
@@ -447,7 +448,7 @@ const set=id=>{links.forEach(a=>a.classList.remove('active'));nav.querySelectorA
 const ids=Object.keys(map);let cur=null;
 function spy(){const y=innerHeight*0.35;let best=null;ids.forEach(id=>{const r=document.getElementById(id).getBoundingClientRect();if(r.top<=y&&r.bottom>0&&(best===null||r.top>document.getElementById(best).getBoundingClientRect().top))best=id});if(best!==cur){cur=best;set(best)}}
 addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy();
-})();
+}catch(err){console.error('nav init failed',err);var h=document.querySelector('header'),b=document.querySelector('.menu-btn');if(h&&b)b.onclick=function(){h.classList.toggle('open');document.body.classList.toggle('menu-open')}}})();
 </script>
 <script src="voice/voice.js" defer></script>
 <script>
