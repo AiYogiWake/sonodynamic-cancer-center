@@ -177,6 +177,15 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 
 .err{font-family:Inter;font-size:12.5px;color:var(--copper);margin-top:12px;min-height:1em}
 .overview-step{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:center}
 .overview-step img{width:100%;border:1px solid #D4A24C33}
+/* arrival */
+.arrival{padding-top:0}
+.arr-aerial{margin:0;position:relative}
+.arr-aerial img{width:100%;display:block;max-height:82vh;object-fit:cover}
+.arr-aerial figcaption{margin-top:10px}
+.arr-line{font-family:"Cormorant Garamond",serif;font-size:clamp(24px,2.6vw,34px);line-height:1.35;text-align:center;max-width:900px;margin:56px auto 50px;color:var(--parch)}
+.arr-fig{margin:0 0 44px;border:1px solid #D4A24C55;padding:8px}
+.arr-fig img{width:100%;display:block;max-height:680px;object-fit:cover}
+.estate-head{padding-top:10px;margin-bottom:28px}.estate-head p{max-width:640px}
 /* passage */
 .passage{background:linear-gradient(#040A10,#0E1433 50%,#040A10)}
 .passage .wrap{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:start}
@@ -269,6 +278,7 @@ footer .logo{margin-bottom:14px}
 <script src="img/mf-float-tank.js"></script>
 <script src="img/mf-grotto-sauna.js"></script>
 <script src="img/mf-gym-luxury.js"></script>
+<script src="img/mf-gym-mirrors.js"></script>
 <script src="img/mf-pools-sunset.js"></script>
 </head>
 <body>
@@ -284,10 +294,28 @@ footer .logo{margin-bottom:14px}
  <div class="wrap">
   <div class="brandlock"><span class="b1">Sonodynamic Cancer Center</span><span class="b2">at AiYogi.ai Lab · Dzogchen Florida · Manasota Key</span></div>
   <h1>Where ancient sound<br>meets the healing echo.</h1>
-  <p class="sub">The Sonodynamic Cancer Center at AiYogi.ai Lab is a sanctuary of recovery on Florida's Gulf coast. Here, the ancient sound of the Tibetan lineages meets sonodynamic therapy (SoSDT), with on-site hyperbaric, sauna, gym, and PEMF.</p>
+  <p class="sub">The Sonodynamic Cancer Center at AiYogi.ai Lab is a sanctuary of recovery on Florida's Gulf coast.</p>
   <div class="cta-row"><a class="btn" href="#signup">Request a First Treatment</a><a class="btn ghost" href="#monastic">Monastic Care: free inquiry</a></div>
  </div>
 </section>
+
+<section class="arrival" id="arrival">
+ <figure class="arr-aerial"><img data-k="mf-aerial-property" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Aerial view of the Manasota Key estate between the Gulf of Mexico and Lemon Bay"><figcaption class="wrap">The estate from above, between the Gulf and Lemon Bay. <span class="real">Real photo</span></figcaption></figure>
+ <div class="wrap"><p class="arr-line">Here, the ancient sound of the Tibetan lineages meets sonodynamic therapy (SoSDT), with on-site hyperbaric, sauna, gym, and PEMF.</p>
+  <figure class="arr-fig"><img data-k="mf-gym-luxury" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The professional gym with an art-epoxy ocean floor and floor-to-ceiling mirrors"><figcaption>The professional gym: a hand-poured ocean floor and floor-to-ceiling mirrors. <span class="real">Real photo · on site</span></figcaption></figure>
+  <figure class="arr-fig"><img data-k="mf-pools-sunset" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The outdoor zen pools at golden hour, with palms and the Gulf beyond"><figcaption>The outdoor pools at golden hour, including the saltwater ozone pool. <span class="real">Real photo · on site</span></figcaption></figure>
+ </div>
+</section>
+
+<div class="journey-intro" id="journey"><div class="wrap center"><span class="eyebrow">How SoSDT works</span><h2>The Dolphin Sonar Journey</h2><p style="max-width:680px;margin:0 auto">A visual meditation on how SoSDT works: sound, light, and the body's own lamps.</p></div></div>
+<div class="journey">
+ <div class="scene" id="sens"><div class="bg" id="sensbg" style="background-image:url(#img-03a-sensitizer-sublingual)"></div><div class="wrap"><div class="txt"><span class="num">SCENE I</span><h2>The Sensitizer Is Received</h2><div class="toggle"><button class="on" data-img="#img-03a-sensitizer-sublingual">Sublingual tablet</button><button data-img="#img-03b-sensitizer-iv">IV infusion</button></div><p>Depending on your protocol it is a small tablet dissolved under the tongue, or a gentle IV infusion while you rest. Like light carried on a river, it travels toward the cells while you rest in stillness, sit in practice, or walk the turtle beach.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-02-sound-bath-chamber)"></div><div class="wrap"><div class="txt"><span class="num">SCENE II</span><h2>The Sound Bath</h2><p>You rest in the sound chamber while bowls and mantra hold the room, and our clinical team guides the focused-sound session.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-04-dolphin-sonar-beam)"></div><div class="wrap"><div class="txt"><span class="num">SCENE III</span><h2>The Focused Echo</h2><p>Like a dolphin's sonar, focused ultrasound gathers gentle sound to one point. It awakens the sensitizer only where the sound converges.</p></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-05-mitochondria-glow)"></div><div class="wrap"><div class="txt"><span class="num">SCENE IV</span><h2>The Lamps Within</h2><p>Inside every cell, mitochondria are the lamps. When sound awakens the sensitizer, it acts here, on the lamps of the cells that have lost their way.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-06-cells-into-light)"></div><div class="wrap"><div class="txt"><span class="num">SCENE V</span><h2>Into Light</h2><p>In this vision, focused sound meets the cells that have lost their way and releases them into light, while the healthy tissue around them rests.</p><span class="art">Artistic visualization</span></div></div></div>
+</div>
+
 
 <section><div class="wrap">
  <div class="doors">
@@ -318,19 +346,10 @@ footer .logo{margin-bottom:14px}
  </div>
 </div></section>
 
-<div class="journey-intro" id="journey"><div class="wrap center"><span class="eyebrow">How SoSDT works</span><h2>The Dolphin Sonar Journey</h2><p style="max-width:680px;margin:0 auto">A visual meditation on how SoSDT works: sound, light, and the body's own lamps.</p></div></div>
-<div class="journey">
- <div class="scene" id="sens"><div class="bg" id="sensbg" style="background-image:url(#img-03a-sensitizer-sublingual)"></div><div class="wrap"><div class="txt"><span class="num">SCENE I</span><h2>The Sensitizer Is Received</h2><div class="toggle"><button class="on" data-img="#img-03a-sensitizer-sublingual">Sublingual tablet</button><button data-img="#img-03b-sensitizer-iv">IV infusion</button></div><p>Depending on your protocol it is a small tablet dissolved under the tongue, or a gentle IV infusion while you rest. Like light carried on a river, it travels toward the cells while you rest in stillness, sit in practice, or walk the turtle beach.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-02-sound-bath-chamber)"></div><div class="wrap"><div class="txt"><span class="num">SCENE II</span><h2>The Sound Bath</h2><p>You rest in the sound chamber while bowls and mantra hold the room, and our clinical team guides the focused-sound session.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-04-dolphin-sonar-beam)"></div><div class="wrap"><div class="txt"><span class="num">SCENE III</span><h2>The Focused Echo</h2><p>Like a dolphin's sonar, focused ultrasound gathers gentle sound to one point. It awakens the sensitizer only where the sound converges.</p></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-05-mitochondria-glow)"></div><div class="wrap"><div class="txt"><span class="num">SCENE IV</span><h2>The Lamps Within</h2><p>Inside every cell, mitochondria are the lamps. When sound awakens the sensitizer, it acts here, on the lamps of the cells that have lost their way.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-06-cells-into-light)"></div><div class="wrap"><div class="txt"><span class="num">SCENE V</span><h2>Into Light</h2><p>In this vision, focused sound meets the cells that have lost their way and releases them into light, while the healthy tissue around them rests.</p><span class="art">Artistic visualization</span></div></div></div>
-</div>
 
 <section class="estate" id="estate">
- <div class="aerial"><img data-k="mf-aerial-property" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Aerial view of the Manasota Key estate: private beach, Gulf of Mexico, 1-acre grounds"><div class="aerial-cap wrap"><span class="eyebrow">The Estate · Manasota Key</span><h2>Between the Gulf and Lemon Bay.</h2><p>One full acre of private grounds on a protected, dolphin-visited turtle beach. Three pools, Bali-inspired architecture, and a 12-foot concrete rise built on 49 pilings.</p></div></div>
+ <div class="wrap estate-head"><span class="eyebrow">The Estate · Manasota Key</span><h2>Between the Gulf and Lemon Bay.</h2><p>One full acre of private grounds on a protected, dolphin-visited turtle beach. Three pools, Bali-inspired architecture, and a 12-foot concrete rise built on 49 pilings.</p></div>
  <div class="wrap">
-  <figure class="pool-hero"><img data-k="mf-pools-sunset" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The outdoor zen pools at golden hour, with palms and the Gulf beyond"><figcaption>The outdoor pools at golden hour, including the saltwater ozone pool. <span class="real">Real photo · on site</span></figcaption></figure>
   <figure class="beach-wide"><img data-k="mf-beach-sunset" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The turtle-nesting beach at sunset on Manasota Key"><figcaption>The turtle-nesting beach at sunset, where dolphins pass close to shore. <span class="real">Real photo</span></figcaption></figure>
   <div class="loc">
    <div class="map"><iframe title="Map of Manasota Key and Englewood, on Florida's Gulf Coast" src="https://maps.google.com/maps?ll=26.95,-82.37&amp;z=12&amp;t=k&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
@@ -354,7 +373,7 @@ footer .logo{margin-bottom:14px}
  <h2>Serious infrastructure for deep recovery.</h2>
  <p style="max-width:760px">This is not a spa. It is a fortress of silence, built on 49 pilings above a protected turtle-nesting beach where night stays dark by law and dolphins pass close to shore.</p>
  <div class="fac-grid">
-  <div class="fac"><div class="ph" style="background-image:url(#img-mf-gym-luxury)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Professional Gym</h3><p>Hand-poured art-epoxy ocean floor and floor-to-ceiling mirrors. Gentle, guided movement for recovery.</p></div></div>
+  <div class="fac"><div class="ph" style="background-image:url(#img-mf-gym-mirrors)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Professional Gym</h3><p>Hand-poured art-epoxy ocean floor and floor-to-ceiling mirrors. Gentle, guided movement for recovery.</p></div></div>
   <div class="fac"><div class="ph" style="background-image:url(#img-08-facilities-collage);background-position:0 0;background-size:200%"></div><div class="b"><span class="real" style="color:var(--copper)">Artistic visualization · real photo needed</span><h3>Hyperbaric Chamber</h3><p>Oxygen under gentle pressure, a natural partner to SoSDT, which works through oxygen inside the cells.</p><span class="ph-note">[placeholder: real H-bot photo, chamber type, supervision]</span></div></div>
   <div class="fac"><div class="ph" style="background-image:url(#img-mf-grotto-sauna)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Two Saunas &amp; the Grotto</h3><p>Two saunas, including the sauna/gym/media room, and the lantern-lit grotto.</p></div></div>
   <div class="fac"><div class="ph" style="background-image:url(#img-ay-shenten-pemf-session)"></div><div class="b"><span class="real">Real photo · Shenten Dargye Ling</span><h3>PEMF</h3><p>Pulsed electromagnetic field sessions, gentle fields that support rest and recovery.</p><span class="ph-note">[placeholder: confirm a PEMF unit is installed on site]</span></div></div>
