@@ -1,7 +1,7 @@
 /* Sona, the voice guide. Self-contained widget. No API keys here.
    Set VOICE_PROXY_URL to the deployed Cloudflare Worker URL (e.g. https://sona-voice.<acct>.workers.dev/chat). */
 const VOICE_PROXY_URL = "";
-(function(){
+(function(){try{
   if (window.__sonaLoaded) return; window.__sonaLoaded = true;
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   const canSpeak = 'speechSynthesis' in window;
@@ -59,13 +59,13 @@ const VOICE_PROXY_URL = "";
   const log=panel.querySelector('.sona-log'), form=panel.querySelector('form'), input=form.querySelector('input'), micB=panel.querySelector('.sona-mic'), tts=panel.querySelector('.sona-tts input');
   const online=!!VOICE_PROXY_URL; const history=[]; let busy=false, rec=null, listening=false, greeted=false;
   const add=(t,c)=>{const d=document.createElement('div');d.className='sona-m '+c;d.textContent=t;log.appendChild(d);log.scrollTop=log.scrollHeight;return d};
-  const say=t=>{if(!canSpeak||!tts||!tts.checked)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);const v=speechSynthesis.getVoices().find(v=>/en(-|_)(US|GB|AU)/i.test(v.lang)&&/female|samantha|karen|serena|google us/i.test(v.name))||speechSynthesis.getVoices().find(v=>/^en/i.test(v.lang));if(v)u.voice=v;u.rate=.98;u.pitch=1;speechSynthesis.speak(u)};
+  const say=t=>{try{if(!canSpeak||!tts||!tts.checked)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);const v=speechSynthesis.getVoices().find(v=>/en(-|_)(US|GB|AU)/i.test(v.lang)&&/female|samantha|karen|serena|google us/i.test(v.name))||speechSynthesis.getVoices().find(v=>/^en/i.test(v.lang));if(v)u.voice=v;u.rate=.98;u.pitch=1;speechSynthesis.speak(u)}catch(_){}};
   function open(){panel.classList.add('open');fab.classList.add('open');fab.setAttribute('aria-expanded','true');
     if(!greeted){greeted=true;
       if(online){const g="Hello, I'm Sona, the sanctuary's voice guide. What brings you here today, and what would you most like to understand?";add(g,'bot');history.push({role:'assistant',content:g})}
       else{add("The voice guide is coming online soon. In the meantime, Jody, our Lead Concierge, is happy to help on WhatsApp.",'sys');input.disabled=true;micB.disabled=true;form.querySelector('[type=submit]').disabled=true;input.placeholder='Coming online soon…'}}
     setTimeout(()=>{if(!input.disabled)input.focus({preventScroll:true})},50)}
-  function close(){stopRec();if(canSpeak)speechSynthesis.cancel();panel.classList.remove('open');fab.classList.remove('open');fab.setAttribute('aria-expanded','false');fab.focus({preventScroll:true})}
+  function close(){stopRec();try{if(canSpeak)speechSynthesis.cancel()}catch(_){}panel.classList.remove('open');fab.classList.remove('open');fab.setAttribute('aria-expanded','false');fab.focus({preventScroll:true})}
   fab.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();panel.classList.contains('open')?close():open()});
   panel.querySelector('.sona-x').addEventListener('click',e=>{e.preventDefault();close()});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open')){e.stopPropagation();close()}},true);
@@ -83,10 +83,10 @@ const VOICE_PROXY_URL = "";
   function stopRec(){if(rec&&listening){try{rec.stop()}catch(_){}}listening=false;micB.classList.remove('listening');fab.classList.remove('listening')}
   if(!SR){micB.title='Voice input is not supported in this browser. Please type instead.';micB.disabled=true}
   micB.addEventListener('click',()=>{if(!SR||!online)return;if(listening){stopRec();return}
-    if(canSpeak)speechSynthesis.cancel();
-    rec=new SR();rec.lang=navigator.language||'en-US';rec.interimResults=true;rec.continuous=false;let final='';
+    try{if(canSpeak)speechSynthesis.cancel()}catch(_){}
+    try{rec=new SR()}catch(_){add('Voice input is not available here. Please type instead.','sys');return}rec.lang=navigator.language||'en-US';rec.interimResults=true;rec.continuous=false;let final='';
     rec.onresult=e=>{let t='';for(const r of e.results){t+=r[0].transcript;if(r.isFinal)final=t}input.value=t};
     rec.onerror=e=>{stopRec();if(e.error==='not-allowed')add('Microphone permission was declined. You can type instead.','sys')};
     rec.onend=()=>{const t=final||input.value;stopRec();if(t.trim())ask(t)};
     try{rec.start();listening=true;micB.classList.add('listening');fab.classList.add('listening')}catch(_){stopRec()}});
-})();
+}catch(e){try{console.warn('Sona voice guide disabled:',e)}catch(_){}}})();
