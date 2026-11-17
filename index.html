@@ -92,6 +92,22 @@ blockquote{font-size:27px;font-style:italic;line-height:1.45;border-left:2px sol
 .toggle button{background:none;border:0;color:var(--gold);font-family:Cinzel;letter-spacing:.16em;font-size:11.5px;padding:9px 16px;cursor:pointer}
 .toggle button.on{background:var(--gold);color:var(--night)}
 .journey-intro{padding:110px 0 60px;background:var(--night)}
+/* estate */
+.estate{padding-top:0}
+.aerial{position:relative;max-height:78vh;overflow:hidden}
+.aerial img{width:100%;display:block;object-fit:cover;max-height:78vh}
+.aerial::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#040A10 4%,#040A1066 40%,transparent 70%)}
+.aerial-cap{position:absolute;left:0;right:0;bottom:30px;z-index:2}
+.aerial-cap p{max-width:620px}
+.pool-hero{margin:60px 0 22px;border:1px solid #D4A24C66;padding:10px}
+.pool-hero img{width:100%;display:block;max-height:640px;object-fit:cover}
+figcaption{font-size:15px;font-style:italic;color:var(--mist);margin-top:10px}
+.estate-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.estate-grid img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;border:1px solid #D4A24C44}
+.loc{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;margin-top:60px;align-items:start}
+.map{border:1px solid #D4A24C88;padding:8px;height:520px}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(25%) brightness(.85) contrast(1.05)}
+.infomap{width:100%;margin-top:24px;border:1px solid #D4A24C44;max-height:420px;object-fit:cover;object-position:top}
 /* facilities */
 .fac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
 .fac{background:var(--mteal);border:1px solid #D4A24C33}
@@ -160,6 +176,7 @@ footer .logo{margin-bottom:14px}
  section{padding:76px 0}
  .doors,.lineage,.mon-grid,.overview-step{grid-template-columns:1fr}
  .fac-grid{grid-template-columns:1fr}
+ .estate-grid,.loc{grid-template-columns:1fr}.map{height:360px}.aerial-cap{position:relative;bottom:0;margin-top:-40px}
  .steps4{grid-template-columns:1fr 1fr}
  .flow{padding:28px 20px}
  .fields{grid-template-columns:1fr}.fields .full{grid-column:auto}
@@ -189,14 +206,18 @@ footer .logo{margin-bottom:14px}
 <script src="img/ay-lamas-retreat-preparation.js"></script>
 <script src="img/ay-lopon-outdoors.js"></script>
 <script src="img/ay-shenten-pemf-session.js"></script>
+<script src="img/mf-aerial-property.js"></script>
+<script src="img/mf-balcony-pools-gulf.js"></script>
 <script src="img/mf-grotto-sauna.js"></script>
 <script src="img/mf-gym-luxury.js"></script>
+<script src="img/mf-map-infographic.js"></script>
+<script src="img/mf-overhead-pools-exterior.js"></script>
 <script src="img/mf-pools-sunset.js"></script>
 </head>
 <body>
 <header><div class="wrap">
  <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" stroke="#D4A24C" stroke-width="1.3"><circle cx="20" cy="20" r="3" fill="#D4A24C"/><path d="M20 4c6 6 6 14 0 20-6-6-6-14 0-20z"/><path d="M36 20c-6 6-14 6-20 0 6-6 14-6 20 0z" transform="rotate(0 20 20)"/><path d="M4 20c6-6 14-6 20 0-6 6-14 6-20 0z"/><path d="M20 36c-6-6-6-14 0-20 6 6 6 14 0 20z"/><circle cx="20" cy="20" r="17" opacity=".5"/></svg><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
- <nav><a href="#journey">Journey</a><a href="#lineage">Lineage</a><a href="#monastic">Monastic Care</a><a href="#facilities">Facilities</a><a href="#faq">FAQ</a><a href="#signup" style="color:var(--gold)">First Treatment</a></nav>
+ <nav><a href="#journey">Journey</a><a href="#lineage">Lineage</a><a href="#monastic">Monastic Care</a><a href="#estate">Estate</a><a href="#facilities">Facilities</a><a href="#faq">FAQ</a><a href="#signup" style="color:var(--gold)">First Treatment</a></nav>
  <button class="menu-btn" aria-label="Menu">Menu</button>
 </div></header>
 
@@ -250,6 +271,32 @@ footer .logo{margin-bottom:14px}
  <div class="scene"><div class="bg" style="background-image:url(#img-05-mitochondria-glow)"></div><div class="wrap"><div class="txt"><span class="num">SCENE VI</span><h2>The Lamps Within</h2><p>Inside every cell, mitochondria are the lamps. When sound awakens the sensitizer, it acts here, on the lamps of the cells that have lost their way.</p><span class="art">Artistic visualization</span></div></div></div>
  <div class="scene"><div class="bg" style="background-image:url(#img-06-cells-into-light)"></div><div class="wrap"><div class="txt"><span class="num">SCENE VII</span><h2>Into Light</h2><p>In this vision, focused sound meets the cells that have lost their way and releases them into light, while the healthy tissue around them rests.</p><span class="art">Artistic visualization</span></div></div></div>
 </div>
+
+<section class="estate" id="estate">
+ <div class="aerial"><img data-k="mf-aerial-property" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Aerial view of the Manasota Key estate: private beach, Gulf of Mexico, 1-acre grounds"><div class="aerial-cap wrap"><span class="eyebrow">The Estate · Manasota Key</span><h2>Between the Gulf and Lemon Bay.</h2><p>One full acre of private grounds on a protected, dolphin-visited turtle beach. Three pools, Bali-inspired architecture, and a 12-foot concrete rise built on 49 pilings.</p></div></div>
+ <div class="wrap">
+  <figure class="pool-hero"><img data-k="mf-pools-sunset" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="The outdoor zen pools at golden hour, with palms and the Gulf beyond"><figcaption>The outdoor pools at golden hour, including the saltwater ozone pool. <span class="real">Real photo · on site</span></figcaption></figure>
+  <div class="estate-grid">
+   <figure><img data-k="mf-overhead-pools-exterior" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Overhead view of the pools, pavilion and tropical gardens"><figcaption>Overhead: pools, pavilion, and gardens. <span class="real">Real photo</span></figcaption></figure>
+   <figure><img data-k="mf-balcony-pools-gulf" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="View from the balcony over the pools and gardens to the Gulf"><figcaption>From the balcony: pools, palms, and the Gulf. <span class="real">Real photo</span></figcaption></figure>
+  </div>
+  <div class="loc">
+   <div class="map"><iframe title="Map of the estate on Manasota Key" src="https://www.google.com/maps?q=6060+Manasota+Key+Rd,+Englewood,+FL+34223&amp;t=k&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+   <div class="loc-info">
+    <span class="eyebrow">Location</span>
+    <h3>6060 Manasota Key Road<br>Englewood, Florida 34223</h3>
+    <ul class="thigle">
+     <li>Venice Jet Port: about 20 minutes, private runway</li>
+     <li>Sarasota, Casey Key, and Venice: a short drive north</li>
+     <li>Dearborn Street, Englewood: vegan cafés, yoga, and Pilates</li>
+     <li>Turtle-nesting beach with no artificial light at night</li>
+    </ul>
+    <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=6060+Manasota+Key+Rd,+Englewood,+FL+34223" target="_blank" rel="noopener">Open in Google Maps</a>
+    <img class="infomap" data-k="mf-map-infographic" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Location map: Venice Jet Port, dining, and wellness near 6060 Manasota Key Road">
+   </div>
+  </div>
+ </div>
+</section>
 
 <section id="facilities"><div class="wrap">
  <span class="eyebrow">The Fortress</span>
