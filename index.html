@@ -25,10 +25,30 @@ header{position:fixed;inset:0 0 auto 0;z-index:50;background:linear-gradient(#04
 header .wrap{display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:10px;font-size:18px;letter-spacing:.18em;text-decoration:none;color:var(--parch)}
 .logo b{color:var(--gold);font-weight:600}
-nav{display:flex;gap:26px}
-nav a{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--parch);text-decoration:none;opacity:.85}
-nav a:hover{color:var(--gold)}
-.menu-btn{display:none;background:none;border:1px solid #D4A24C66;color:var(--gold);padding:6px 12px;font-family:Cinzel;font-size:11px;letter-spacing:.2em}
+/* nav */
+.lk,.l1{white-space:nowrap}
+section[id],div[id=story],div[id=growth]{scroll-margin-top:84px}
+nav{display:flex;align-items:center;gap:4px}
+nav a{text-decoration:none}
+.nv-top{font-family:Cinzel;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--parch);opacity:.88;padding:8px 9px;white-space:nowrap;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.nv-top:hover,.nv-g:hover>.nv-top,.nv-top.active,.nv-g.active>.nv-top{color:var(--gold);opacity:1}
+.nv-top.active,.nv-g.active>.nv-top{border-bottom-color:var(--gold)}
+.nv-cta{color:var(--gold);border:1px solid #D4A24C88!important;margin-left:8px;padding:8px 14px}
+.nv-cta:hover{background:#D4A24C22}
+.nv-g{position:relative;display:flex;align-items:center}
+.nv-tg{background:none;border:0;color:var(--parch);padding:6px 4px 6px 0;cursor:pointer;opacity:.7}
+.nv-g:hover .nv-tg,.nv-g.active .nv-tg{color:var(--gold)}
+.nv-dd{position:absolute;top:100%;left:0;min-width:230px;background:#06101Cf5;border:1px solid #D4A24C55;box-shadow:0 18px 40px #0009;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+.nv-g:hover .nv-dd,.nv-g:focus-within .nv-dd,.nv-g.open .nv-dd{opacity:1;visibility:visible;transform:none}
+.nv-dd a{display:block;padding:10px 18px;font-family:Inter;font-size:13.5px;color:var(--parch);letter-spacing:.02em}
+.nv-dd a:hover,.nv-dd a.active{color:var(--gold);background:#D4A24C14}
+.nv-dd a.active::before{content:"◆ ";font-size:9px;color:var(--gold)}
+.menu-btn{display:none;background:none;border:1px solid #D4A24C66;width:44px;height:40px;padding:10px;cursor:pointer;flex-direction:column;justify-content:space-between}
+.menu-btn span{display:block;height:1.5px;background:var(--gold);transition:.25s}
+header.open .menu-btn span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+header.open .menu-btn span:nth-child(2){opacity:0}
+header.open .menu-btn span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+@media (max-width:1240px){.nv-top{font-size:10.5px;letter-spacing:.1em;padding:8px 6px}}
 .lk{display:flex;flex-direction:column;line-height:1.15}.l1{font-size:13px;letter-spacing:.16em;color:var(--parch)}.l2{font-family:"Cormorant Garamond";font-style:italic;font-size:15px;letter-spacing:.04em;color:var(--gold)}
 .brandlock{display:flex;flex-direction:column;gap:4px;margin-bottom:26px;border-left:2px solid var(--gold);padding-left:16px}
 .b1{font-family:Cinzel;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}.b2{font-family:Cinzel;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--parch);opacity:.85}
@@ -157,6 +177,28 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 
 .err{font-family:Inter;font-size:12.5px;color:var(--copper);margin-top:12px;min-height:1em}
 .overview-step{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:center}
 .overview-step img{width:100%;border:1px solid #D4A24C33}
+/* passage */
+.passage{background:linear-gradient(#040A10,#0E1433 50%,#040A10)}
+.passage .wrap{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:start}
+.passage-fig{position:sticky;top:110px}
+.passage-fig{margin:0;border:1px solid #D4A24C55;padding:8px}.passage-fig img{width:100%;display:block}
+.pass-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;margin:24px 0}
+.pass-grid b{font-family:Cinzel;font-weight:400;color:var(--gold);font-size:14.5px;letter-spacing:.12em;text-transform:uppercase}
+.pass-grid p{font-size:17px;margin:4px 0 0}
+/* sister + contact */
+.sister{background:radial-gradient(ellipse at center,#0E1433 0%,#040A10 70%)}
+.pod-map{margin:36px auto 0;max-width:1080px;border:1px solid #D4A24C55;padding:8px}
+.pod-map img{width:100%;display:block}
+.sis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px;margin:30px auto 0}
+.sis{text-align:center;border:1px solid #D4A24C55;background:#0B2A35aa;padding:26px 16px}
+.sis i{display:block;width:44px;height:44px;margin:0 auto 12px;border-radius:50%;border:1px solid var(--gold);box-shadow:0 0 0 6px #D4A24C22,0 0 0 13px #D4A24C11,0 0 22px #D4A24C66;background:radial-gradient(#F1D08A,#D4A24C 45%,transparent 50%)}
+.sis h3{font-size:22px;margin-bottom:2px}.sis p{font-size:16px;color:var(--mist)}
+.go-link{font-family:Cinzel;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+.wa{display:inline-flex;align-items:center;gap:10px;font-family:Inter;font-size:15px;color:#fff;background:#128C7E;border:1px solid #25D366;padding:12px 20px;text-decoration:none;border-radius:999px}
+.wa:hover{background:#25D366;color:#04210f}
+footer .wa{font-size:12px;padding:3px 10px;vertical-align:middle}
+footer .wa .wa-ic{width:14px;height:14px}
+footer a{color:var(--parch)}
 /* faq */
 details{border-bottom:1px solid #D4A24C33;padding:16px 0}
 summary{cursor:pointer;font-family:Cinzel;font-size:16px;letter-spacing:.06em;color:var(--parch)}
@@ -172,10 +214,23 @@ footer .logo{margin-bottom:14px}
 @media (max-width:860px){
  .l1{font-size:10.5px;letter-spacing:.1em}.l2{font-size:13px}.logo svg{width:24px}
  body{font-size:18px}
- nav{display:none}.menu-btn{display:block}
+ .menu-btn{display:flex;position:relative;z-index:62}
+ nav{position:fixed;inset:0;z-index:61;background:#040A10;flex-direction:column;align-items:stretch;gap:0;padding:86px 28px 40px;overflow-y:auto;opacity:0;visibility:hidden;transition:.25s}
+ header.open nav{opacity:1;visibility:visible}
+ .nv-top{font-size:15px;padding:14px 0;border-bottom:1px solid #D4A24C22!important}
+ .nv-g{flex-wrap:wrap}.nv-g>.nv-top{flex:1}
+ .nv-tg{padding:14px 6px;border-bottom:1px solid #D4A24C22}
+ .nv-dd{position:static;opacity:1;visibility:visible;transform:none;display:none;box-shadow:none;border:0;border-left:1px solid #D4A24C55;margin:6px 0 10px 4px;min-width:0;width:100%;background:none}
+ .nv-g.open .nv-dd{display:block}
+ .nv-cta{margin:20px 0 0;text-align:center}
+ body.menu-open{overflow:hidden}
+ body.menu-open .sticky,body.menu-open .sona-fab,body.menu-open .sona-panel{display:none!important}
+ header.open{background:#040A10}
  section{padding:76px 0}
  .doors,.lineage,.mon-grid,.overview-step{grid-template-columns:1fr}
- .fac-grid{grid-template-columns:1fr}.fac,.fac:nth-child(4){grid-column:auto}
+ .fac-grid{grid-template-columns:1fr}
+ .sis-grid{grid-template-columns:1fr}
+ .passage .wrap,.pass-grid{grid-template-columns:1fr}.passage-fig{position:static}.fac,.fac:nth-child(4){grid-column:auto}
  .loc{grid-template-columns:1fr}.beach-wide img{aspect-ratio:4/3}.map{height:360px}.aerial-cap{position:relative;bottom:0;margin-top:-40px}
  .steps4{grid-template-columns:1fr 1fr}
  .flow{padding:28px 20px}
@@ -201,6 +256,8 @@ footer .logo{margin-bottom:14px}
 <script src="img/06-cells-into-light.js"></script>
 <script src="img/07-overview-infographic.js"></script>
 <script src="img/08-facilities-collage.js"></script>
+<script src="img/12-global-dolphin-pod-network.js"></script>
+<script src="img/13-conscious-passage.js"></script>
 <script src="img/ay-geshe-elements-front.js"></script>
 <script src="img/ay-karma-monastery.js"></script>
 <script src="img/ay-lamas-retreat-preparation.js"></script>
@@ -217,8 +274,8 @@ footer .logo{margin-bottom:14px}
 <body>
 <header><div class="wrap">
  <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" stroke="#D4A24C" stroke-width="1.3"><circle cx="20" cy="20" r="3" fill="#D4A24C"/><path d="M20 4c6 6 6 14 0 20-6-6-6-14 0-20z"/><path d="M36 20c-6 6-14 6-20 0 6-6 14-6 20 0z" transform="rotate(0 20 20)"/><path d="M4 20c6-6 14-6 20 0-6 6-14 6-20 0z"/><path d="M20 36c-6-6-6-14 0-20 6 6 6 14 0 20z"/><circle cx="20" cy="20" r="17" opacity=".5"/></svg><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
- <nav><a href="#journey">Journey</a><a href="#lineage">Lineage</a><a href="#monastic">Monastic Care</a><a href="#estate">Estate</a><a href="#facilities">Facilities</a><a href="#faq">FAQ</a><a href="#signup" style="color:var(--gold)">First Treatment</a></nav>
- <button class="menu-btn" aria-label="Menu">Menu</button>
+ <nav id="mainnav" aria-label="Main"><a class="nv-top" href="#top">Home</a><div class="nv-g"><a class="nv-top" href="#journey">The Process</a><button class="nv-tg" aria-label="Show The Process links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#journey">Dolphin Sonar Journey</a><a href="#facilities">Facilities</a><a href="#signup">First Treatment</a></div></div><div class="nv-g" data-g="story"><a class="nv-top" href="creation-story.html">Our Story</a><button class="nv-tg" aria-label="Show Our Story links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="creation-story.html">Creation Story</a><a href="creation-story.html#team">Dr. Wang &amp; Team</a><a href="creation-story.html#research">Research Timeline</a><a href="#lineage">Our Lineage</a></div></div><div class="nv-g"><a class="nv-top" href="#monastic">Care</a><button class="nv-tg" aria-label="Show Care links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#monastic">Monastic Care</a><a href="#passage">Conscious Passage</a></div></div><div class="nv-g"><a class="nv-top" href="#estate">Places</a><button class="nv-tg" aria-label="Show Places links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#estate">The Estate · Location</a><a href="#sister">Sister Centers</a></div></div><a class="nv-top" href="#faq">FAQ</a><a class="nv-top" href="#contact">Contact</a><a class="nv-top nv-cta" href="#signup">First Treatment</a></nav>
+ <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
 </div></header>
 
 <section class="hero" id="top">
@@ -321,6 +378,36 @@ footer .logo{margin-bottom:14px}
  </div>
 </div></section>
 
+<section class="passage" id="passage"><div class="wrap">
+ <figure class="passage-fig"><img data-k="13-conscious-passage" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="A butter lamp on a shrine ledge before an open sea and a rainbow at dawn"><figcaption>Artistic visualization</figcaption></figure>
+ <div class="passage-txt">
+  <span class="eyebrow">Conscious Passage</span>
+  <h2>When the time comes, we stay beside you.</h2>
+  <p>In the Dzogchen tradition, death is not only an ending. It is a profound moment of practice, when the nature of mind may be recognized with great clarity. For anyone who wishes it, Conscious Passage offers loving, steady accompaniment at the end of life, honoring the natural moment, never hastening it or holding it back.</p>
+  <div class="pass-grid">
+   <div><b>Phowa</b><p>Instruction in phowa, the transference of consciousness, practiced in advance with a teacher, so that it is familiar when it is needed.</p></div>
+   <div><b>Bardo guidance</b><p>Gentle teachings on the bardos, and readings from the <i>Great Liberation upon Hearing in the Bardo</i>, before, during and after the passage.</p></div>
+   <div><b>Resting in clarity</b><p>Daily support for meditation and prayer, so that the mind can rest in its own open, luminous nature.</p></div>
+   <div><b>Comfort care alongside</b><p>Quiet rooms, gentle bodywork, and close coordination with your own hospice and palliative care team, so that physical comfort and spiritual practice support each other.</p></div>
+   <div><b>Family &amp; sangha</b><p>A welcoming space for loved ones and the sangha to gather, practice together, grieve, and be held, with guidance on how to support the one who is passing.</p></div>
+   <div><b>A lama's presence</b><p>Where wished, a lama offers presence, prayers and practice at the bedside, followed by traditional prayers through the forty-nine days.</p></div>
+  </div>
+  <p class="cap">Offered with reverence to practitioners of every tradition, and to anyone who simply wishes to meet this moment awake. <span class="ph">[placeholder: names of participating teachers, at the owner's discretion]</span></p>
+  <a class="btn ghost" href="#contact">Speak with us gently</a>
+ </div>
+</div></section>
+
+<section class="sister" id="sister"><div class="wrap">
+ <div class="center"><span class="eyebrow">Sister Locations</span><h2>One pod, many shores.</h2><p style="max-width:680px;margin:0 auto">Like dolphins traveling together, our centers move as one family, sharing the same sound, the same care, and the same lineage of listening.</p></div>
+ <figure class="pod-map"><img data-k="12-global-dolphin-pod-network" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artistic map of a golden dolphin-pod network linking sister centers"><figcaption>Artistic visualization; node positions are symbolic.</figcaption></figure>
+ <div class="sis-grid">
+  <div class="sis"><i></i><h3>Bali</h3><p>Indonesia</p></div>
+  <div class="sis"><i></i><h3>Jakarta</h3><p>Indonesia</p></div>
+  <div class="sis"><i></i><h3>Sarasota</h3><p>Florida, USA</p></div>
+ </div>
+ <p class="center" style="margin-top:26px"><a class="go-link" href="creation-story.html#growth">Read the Creation Story →</a></p>
+</div></section>
+
 <section class="signup" id="signup"><div class="wrap">
  <div class="center"><span class="eyebrow">First Treatment · Non-monastic</span><h2>Request your first treatment</h2><p style="max-width:640px;margin:0 auto">This is a request, not a booking. We ask only for contact details, preferences, and availability. No medical records.</p></div>
  <form class="flow" id="flow" novalidate>
@@ -400,20 +487,20 @@ footer .logo{margin-bottom:14px}
  <details><summary>Why the dolphin?</summary><p>Dolphins navigate with focused sound. That is our image for gentle, precise ultrasound, and dolphins visit the shore of our Key.</p></details>
 </div></section>
 
+<section class="contact" id="contact"><div class="wrap center" style="max-width:760px">
+ <span class="eyebrow">Contact</span><h2>Come quietly. Write to us.</h2>
+ <p>Our lead concierge will answer personally and guide you, whether you're a monastic, a guest considering a first treatment, or a doctor.</p>
+ <div style="margin-top:26px"><a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jody (Lead Concierge)</span></a></div>
+ <p class="cap" style="margin-top:16px">Or use the <a href="#signup">first-treatment request</a> or the <a href="#monastic">monastic inquiry</a>.</p>
+</div></section>
+
 <footer><div class="wrap">
  <a class="logo" href="#top"><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
- <p>A Dzogchen Florida recovery sanctuary · A program of ARDTiLYS with AiYogi &amp; AiYogiLAB <span class="ph">[placeholder: legal entity]</span><br>Manasota Key, on Florida's Gulf Coast · DzogchenFlorida.com · ManasotaFortress.com · AiYogi.ai<br>Privacy · Terms <span class="ph">[placeholder]</span></p>
+ <p>A Dzogchen Florida recovery sanctuary · A program of ARDTiLYS with AiYogi &amp; AiYogiLAB <span class="ph">[placeholder: legal entity]</span><br>Manasota Key, on Florida's Gulf Coast · DzogchenFlorida.com · ManasotaFortress.com · AiYogi.ai<br><span class="flinks"><a href="#top">Home</a> · <a href="#journey">The Process</a> · <a href="creation-story.html">Creation Story</a> · <a href="creation-story.html#team">Dr. Wang &amp; Team</a> · <a href="#monastic">Monastic Care</a> · <a href="#passage">Conscious Passage</a> · <a href="#estate">The Estate</a> · <a href="#sister">Sister Centers</a> · <a href="#faq">FAQ</a> · <a href="#contact">Contact</a> · <a href="#signup">First Treatment</a></span><br><a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jody (Lead Concierge)</span></a> · Privacy · Terms <span class="ph">[placeholder]</span></p>
  <p class="footline">SoSDT is offered as an integrative therapy; individual results vary.</p>
 </div></footer>
 <a class="btn sticky" href="#signup">First Treatment</a>
 
-<script>
-(function(){const R=v=>v.replace(/#img-([A-Za-z0-9_-]+)/g,(m,k)=>IMG[k]||m);
-document.querySelectorAll('style').forEach(t=>{if(t.textContent.includes('#img-'))t.textContent=R(t.textContent)});
-document.querySelectorAll('[style*="#img-"]').forEach(e=>e.setAttribute('style',R(e.getAttribute('style'))));
-document.querySelectorAll('img[data-k]').forEach(e=>e.src=IMG[e.dataset.k]);
-document.querySelectorAll('[data-img*="#img-"]').forEach(e=>e.dataset.img=R(e.dataset.img));})();
-</script>
 <script>
 const steps=[...document.querySelectorAll('.step')],prog=document.getElementById('prog'),next=document.getElementById('next'),back=document.getElementById('back'),err=document.getElementById('err'),f=document.getElementById('flow');
 const labels=['About you','Care team','Preferences','Availability','Review'];
@@ -443,5 +530,31 @@ if(q.get('demo')){const v={first:'Ada',last:'Example',email:'ada@example.com',lo
  f.querySelectorAll('input[name=int]')[0].checked=true;f.querySelectorAll('input[name=int]')[1].checked=true;f.querySelectorAll('input[name=day]')[1].checked=true}
 if(q.get('step')){show(+q.get('step'))}
 </script>
-</body>
+<script id="navjs">
+(function(){const h=document.querySelector('header'),mb=document.querySelector('.menu-btn'),nav=document.getElementById('mainnav');
+const close=()=>{h.classList.remove('open');document.body.classList.remove('menu-open');mb.setAttribute('aria-expanded','false')};
+mb.addEventListener('click',()=>{const o=h.classList.toggle('open');document.body.classList.toggle('menu-open',o);mb.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('.nv-tg').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();const g=b.parentElement,o=!g.classList.contains('open');nav.querySelectorAll('.nv-g.open').forEach(x=>x!==g&&x.classList.remove('open'));g.classList.toggle('open',o);b.setAttribute('aria-expanded',o)}));
+document.addEventListener('click',e=>{if(!nav.contains(e.target))nav.querySelectorAll('.nv-g.open').forEach(x=>x.classList.remove('open'))});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){close();nav.querySelectorAll('.nv-g.open').forEach(x=>x.classList.remove('open'))}});
+const page=location.pathname.split('/').pop()||'index.html';
+const local=a=>{const u=new URL(a.getAttribute('href'),location.href);return (u.pathname.split('/').pop()||'index.html')===page?u.hash:null};
+document.querySelectorAll('a[href]').forEach(a=>{const hs=local(a);if(hs===null)return;a.addEventListener('click',e=>{const id=hs.slice(1)||'top',t=document.getElementById(id);if(!t)return;e.preventDefault();close();t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});history.replaceState(null,'','#'+id)})});
+const links=[...nav.querySelectorAll('a')],map={};
+links.forEach(a=>{const hs=local(a);if(hs===null)return;const id=hs.slice(1)||'top';if(document.getElementById(id))(map[id]=map[id]||[]).push(a)});
+const set=id=>{links.forEach(a=>a.classList.remove('active'));nav.querySelectorAll('.nv-g').forEach(g=>g.classList.remove('active'));(map[id]||[]).forEach(a=>{a.classList.add('active');const g=a.closest('.nv-g');if(g)g.classList.add('active')});if(document.body.dataset.page==='story'){const g=nav.querySelector('.nv-g[data-g=story]');if(g)g.classList.add('active')}};
+const ids=Object.keys(map);let cur=null;
+function spy(){const y=innerHeight*0.35;let best=null;ids.forEach(id=>{const r=document.getElementById(id).getBoundingClientRect();if(r.top<=y&&r.bottom>0&&(best===null||r.top>document.getElementById(best).getBoundingClientRect().top))best=id});if(best!==cur){cur=best;set(best)}}
+addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy();
+})();
+</script>
+<script src="voice/voice.js" defer></script>
+<script>
+  (function(){const R=v=>v.replace(/#img-([A-Za-z0-9_-]+)/g,(m,k)=>IMG[k]||m);
+  document.querySelectorAll('style').forEach(t=>{if(t.textContent.includes('#img-'))t.textContent=R(t.textContent)});
+  document.querySelectorAll('[style*="#img-"]').forEach(e=>e.setAttribute('style',R(e.getAttribute('style'))));
+  document.querySelectorAll('img[data-k]').forEach(e=>e.src=IMG[e.dataset.k]);
+  document.querySelectorAll('[data-img*="#img-"]').forEach(e=>e.dataset.img=R(e.dataset.img));})();
+  </script>
+  </body>
 </html>

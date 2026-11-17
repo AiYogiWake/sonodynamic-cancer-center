@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Creation Story · Sonodynamic Cancer Center at AiYogi.ai Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--night:#040A10;--indigo:#0E1433;--mteal:#0B2A35;--teal:#1E8C93;--aqua:#5FD4CF;--gold:#D4A24C;--copper:#D9773A;--parch:#E6E0D5;--mist:#A9A296;--maroon:#7A1F2B}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--parch);font-family:"Cormorant Garamond",Georgia,serif;font-size:20px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.eyebrow,.btn,nav a,.logo{font-family:"Cinzel",serif}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.08;font-weight:400;letter-spacing:.02em}
+h2{font-size:clamp(28px,3.6vw,44px);font-weight:400;line-height:1.15;margin-bottom:.5em}
+h3{font-size:20px;font-weight:600;letter-spacing:.06em;color:var(--gold);margin-bottom:.4em}
+.eyebrow{font-size:12px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-bottom:18px;display:block}
+a{color:var(--aqua)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:110px 0;position:relative}
+.gold-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:linear-gradient(#040A10ee,#040A1000);padding:18px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-size:18px;letter-spacing:.18em;text-decoration:none;color:var(--parch)}
+.logo b{color:var(--gold);font-weight:600}
+/* nav */
+.lk,.l1{white-space:nowrap}
+section[id],div[id=story],div[id=growth]{scroll-margin-top:84px}
+nav{display:flex;align-items:center;gap:4px}
+nav a{text-decoration:none}
+.nv-top{font-family:Cinzel;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--parch);opacity:.88;padding:8px 9px;white-space:nowrap;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.nv-top:hover,.nv-g:hover>.nv-top,.nv-top.active,.nv-g.active>.nv-top{color:var(--gold);opacity:1}
+.nv-top.active,.nv-g.active>.nv-top{border-bottom-color:var(--gold)}
+.nv-cta{color:var(--gold);border:1px solid #D4A24C88!important;margin-left:8px;padding:8px 14px}
+.nv-cta:hover{background:#D4A24C22}
+.nv-g{position:relative;display:flex;align-items:center}
+.nv-tg{background:none;border:0;color:var(--parch);padding:6px 4px 6px 0;cursor:pointer;opacity:.7}
+.nv-g:hover .nv-tg,.nv-g.active .nv-tg{color:var(--gold)}
+.nv-dd{position:absolute;top:100%;left:0;min-width:230px;background:#06101Cf5;border:1px solid #D4A24C55;box-shadow:0 18px 40px #0009;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s}
+.nv-g:hover .nv-dd,.nv-g:focus-within .nv-dd,.nv-g.open .nv-dd{opacity:1;visibility:visible;transform:none}
+.nv-dd a{display:block;padding:10px 18px;font-family:Inter;font-size:13.5px;color:var(--parch);letter-spacing:.02em}
+.nv-dd a:hover,.nv-dd a.active{color:var(--gold);background:#D4A24C14}
+.nv-dd a.active::before{content:"◆ ";font-size:9px;color:var(--gold)}
+.menu-btn{display:none;background:none;border:1px solid #D4A24C66;width:44px;height:40px;padding:10px;cursor:pointer;flex-direction:column;justify-content:space-between}
+.menu-btn span{display:block;height:1.5px;background:var(--gold);transition:.25s}
+header.open .menu-btn span:nth-child(1){transform:translateY(8.5px) rotate(45deg)}
+header.open .menu-btn span:nth-child(2){opacity:0}
+header.open .menu-btn span:nth-child(3){transform:translateY(-8.5px) rotate(-45deg)}
+@media (max-width:1240px){.nv-top{font-size:10.5px;letter-spacing:.1em;padding:8px 6px}}
+.lk{display:flex;flex-direction:column;line-height:1.15}.l1{font-size:13px;letter-spacing:.16em;color:var(--parch)}.l2{font-family:"Cormorant Garamond";font-style:italic;font-size:15px;letter-spacing:.04em;color:var(--gold)}
+.brandlock{display:flex;flex-direction:column;gap:4px;margin-bottom:26px;border-left:2px solid var(--gold);padding-left:16px}
+.b1{font-family:Cinzel;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}.b2{font-family:Cinzel;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--parch);opacity:.85}
+.namedisc{font-family:Inter;font-size:12.5px;color:#F1D08A;background:#0B2A35cc;border:1px solid #D4A24C66;padding:6px 10px;margin-top:6px;display:inline-block;max-width:560px;line-height:1.45}
+.footline{font-size:11.5px;opacity:.7;margin-top:14px}
+.btn{display:inline-block;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;padding:15px 28px;text-decoration:none;border:1px solid var(--gold);color:var(--night);background:linear-gradient(90deg,#D4A24C,#F1D08A,#D4A24C);cursor:pointer;transition:.3s}
+.btn:hover{filter:brightness(1.1);box-shadow:0 0 30px #D4A24C55}
+.btn.ghost{background:transparent;color:var(--gold)}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(#img-01-hero-dolphins-sonar) center/cover;animation:kb 26s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#040A10f2 0%,#040A10b0 42%,#040A1020 75%),linear-gradient(0deg,#040A10 0%,transparent 30%)}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08) translateX(-1.5%)}}
+.rings{position:absolute;left:60%;top:50%;width:10px;height:10px;z-index:1;pointer-events:none}
+.rings span{position:absolute;left:50%;top:50%;border:1px solid #F1D08A;border-radius:50%;transform:translate(-50%,-50%);animation:ring 6s linear infinite;opacity:0}
+.rings span:nth-child(2){animation-delay:2s}.rings span:nth-child(3){animation-delay:4s}
+@keyframes ring{0%{width:20px;height:20px;opacity:.8}100%{width:900px;height:900px;opacity:0}}
+.hero .wrap{position:relative;z-index:2}
+.hero p.sub{max-width:560px;font-size:22px;margin:22px 0 34px;color:#EDE6D9}
+.cta-row{display:flex;gap:16px;flex-wrap:wrap}
+.micro{font-size:15px;font-style:italic;color:var(--mist);margin-top:22px}
+/* doors */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.door{position:relative;min-height:380px;display:flex;flex-direction:column;justify-content:flex-end;padding:36px;border:1px solid #D4A24C55;overflow:hidden;text-decoration:none;color:var(--parch)}
+.door .img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.2s}
+.door:hover .img{transform:scale(1.05)}
+.door::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#040A10f5 10%,#040A1060 60%,#040A1020);z-index:1}
+.door>*:not(.img){position:relative;z-index:2}
+.door p{font-size:19px;max-width:440px}
+.door .go{font-family:Cinzel;font-size:12px;letter-spacing:.2em;color:var(--gold);margin-top:14px;text-transform:uppercase}
+.tag{position:absolute!important;top:20px;left:20px;font-family:Inter;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:#7A1F2Bcc;padding:5px 10px}
+/* overview */
+.overview{background:radial-gradient(ellipse at center,#0E1433 0%,#040A10 70%)}
+.center{text-align:center}
+.info{position:relative;margin:40px auto 0;max-width:1080px}
+.info img{width:100%;display:block;border:1px solid #D4A24C33}
+.steps4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:26px}
+.steps4 div{text-align:center;font-size:17px;color:#d9d2c4}
+.steps4 b{display:block;font-family:Cinzel;color:var(--gold);letter-spacing:.14em;font-size:14px;font-weight:600;margin-bottom:6px}
+/* lineage */
+.lineage{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.frame{position:relative;border:1px solid #D4A24C88;padding:10px}
+.frame img{width:100%;display:block}
+.frame::before,.frame::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--gold)}
+.frame::before{top:-6px;left:-6px;border-right:0;border-bottom:0}.frame::after{bottom:-6px;right:-6px;border-left:0;border-top:0}
+blockquote{font-size:27px;font-style:italic;line-height:1.45;border-left:2px solid var(--gold);padding-left:24px;margin:20px 0}
+.cap{font-size:14.5px;font-style:italic;color:var(--mist);margin-top:10px}
+/* journey */
+.journey{padding:0;background:#000}
+.scene{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.scene .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);transition:transform 6s ease-out}
+.scene.in .bg{transform:scale(1)}
+.scene::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#040A10 0%,#040A10a0 28%,transparent 60%)}
+.scene .txt{position:relative;z-index:2;padding:0 0 70px;max-width:720px;opacity:0;transform:translateY(16px);transition:1.2s}
+.scene.in .txt{opacity:1;transform:none}
+.scene .num{font-family:Cinzel;color:var(--gold);letter-spacing:.3em;font-size:12px}
+.scene h2{margin:8px 0 10px}
+.scene p{font-size:21px}
+.art{display:inline-block;margin-top:12px;font-size:14px;font-style:italic;color:#F1D08A;border:1px solid #D4A24C66;padding:4px 10px;background:#040A1099}
+.toggle{display:inline-flex;border:1px solid var(--gold);margin:6px 0 14px}
+.toggle button{background:none;border:0;color:var(--gold);font-family:Cinzel;letter-spacing:.16em;font-size:11.5px;padding:9px 16px;cursor:pointer}
+.toggle button.on{background:var(--gold);color:var(--night)}
+.journey-intro{padding:110px 0 60px;background:var(--night)}
+/* estate */
+.estate{padding-top:0}
+.aerial{position:relative;max-height:78vh;overflow:hidden}
+.aerial img{width:100%;display:block;object-fit:cover;max-height:78vh}
+.aerial::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#040A10 4%,#040A1066 40%,transparent 70%)}
+.aerial-cap{position:absolute;left:0;right:0;bottom:30px;z-index:2}
+.aerial-cap p{max-width:620px}
+.pool-hero{margin:60px 0 22px;border:1px solid #D4A24C66;padding:10px}
+.pool-hero img{width:100%;display:block;max-height:640px;object-fit:cover}
+figcaption{font-size:15px;font-style:italic;color:var(--mist);margin-top:10px}
+.beach-wide{margin-top:8px}
+.beach-wide img{width:100%;aspect-ratio:21/9;object-fit:cover;display:block;border:1px solid #D4A24C44}
+.loc{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;margin-top:60px;align-items:start}
+.map{border:1px solid #D4A24C88;padding:8px;height:520px}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(25%) brightness(.85) contrast(1.05)}
+.infomap{width:100%;margin-top:24px;border:1px solid #D4A24C44;max-height:420px;object-fit:cover;object-position:top}
+/* facilities */
+.fac-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin-top:40px}.fac{grid-column:span 2}.fac:nth-child(4){grid-column:2/span 2}
+.fac{background:var(--mteal);border:1px solid #D4A24C33}
+.fac .ph{aspect-ratio:4/3;background-size:cover;background-position:center}
+.fac .b{padding:20px 22px 24px}
+.fac p{font-size:17px;color:#d6cfc1}
+.ph-note{font-family:Inter;font-size:11.5px;color:var(--copper);margin-top:8px;display:block}
+.real{font-family:Inter;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--aqua)}
+/* monastic */
+.monastic{background:linear-gradient(180deg,#040A10,#0E1433 50%,#040A10)}
+.mon-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.mon-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mon-photos img{width:100%;height:100%;object-fit:cover;display:block;border:1px solid #D4A24C44}
+.mon-photos img:first-child{grid-column:span 2;aspect-ratio:16/9}
+.mon-photos img:not(:first-child){aspect-ratio:1}
+ul.thigle{list-style:none;margin:16px 0}
+ul.thigle li{padding-left:28px;position:relative;margin:8px 0;font-size:19px}
+ul.thigle li::before{content:"";position:absolute;left:4px;top:.55em;width:10px;height:10px;border-radius:50%;background:radial-gradient(#F1D08A,#D4A24C 60%,transparent 70%);box-shadow:0 0 10px #D4A24C}
+/* signup */
+.signup{background:radial-gradient(ellipse at top,#0B2A35 0%,#040A10 65%)}
+.flow{max-width:820px;margin:40px auto 0;background:#08131Bcc;border:1px solid #D4A24C55;padding:44px 48px;backdrop-filter:blur(6px)}
+.progress{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px;position:relative}
+.progress::before{content:"";position:absolute;left:18px;right:18px;top:18px;height:1px;background:#D4A24C55}
+.pr{position:relative;z-index:1;text-align:center;font-family:Inter;font-size:11px;letter-spacing:.08em;color:var(--mist);width:20%}
+.pr i{display:block;width:36px;height:36px;margin:0 auto 8px;border-radius:50%;border:1px solid var(--gold);background:var(--night);box-shadow:inset 0 0 0 5px var(--night),inset 0 0 0 6px #D4A24C55}
+.pr.done i,.pr.cur i{background:radial-gradient(#F1D08A,#D4A24C);box-shadow:0 0 16px #D4A24C88}
+.pr.cur{color:var(--gold)}
+.step{display:none;animation:fade .6s}
+.step.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+.step h3{font-size:24px;font-weight:400}
+.hint{font-family:Inter;font-size:13px;color:var(--mist);margin-bottom:18px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+.fields .full{grid-column:span 2}
+label{font-family:Inter;font-size:12.5px;letter-spacing:.04em;color:#cfc8ba;display:block}
+label .req{color:var(--gold)}
+input,select,textarea{width:100%;margin-top:6px;background:#040A10;border:1px solid #1E8C9366;color:var(--parch);font-family:Inter;font-size:15px;padding:11px 12px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px #D4A24C22}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips label{border:1px solid #1E8C9399;padding:8px 13px;cursor:pointer;font-size:13px}
+.chips input{display:none}
+.chips label:has(input:checked){background:var(--teal);border-color:var(--aqua);color:#fff}
+.chk{display:flex;gap:12px;align-items:flex-start;margin:12px 0;font-size:14px;line-height:1.5}
+.chk input{width:18px;height:18px;margin-top:2px;accent-color:var(--gold);flex:none}
+.nav-btns{display:flex;justify-content:space-between;margin-top:30px}
+.summary{font-family:Inter;font-size:13.5px;background:#040A10;border:1px solid #1E8C9344;padding:16px 18px;margin-bottom:14px;line-height:1.7}
+.err{font-family:Inter;font-size:12.5px;color:var(--copper);margin-top:12px;min-height:1em}
+.overview-step{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:center}
+.overview-step img{width:100%;border:1px solid #D4A24C33}
+/* passage */
+.passage{background:linear-gradient(#040A10,#0E1433 50%,#040A10)}
+.passage .wrap{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:start}
+.passage-fig{position:sticky;top:110px}
+.passage-fig{margin:0;border:1px solid #D4A24C55;padding:8px}.passage-fig img{width:100%;display:block}
+.pass-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;margin:24px 0}
+.pass-grid b{font-family:Cinzel;font-weight:400;color:var(--gold);font-size:14.5px;letter-spacing:.12em;text-transform:uppercase}
+.pass-grid p{font-size:17px;margin:4px 0 0}
+/* sister + contact */
+.sister{background:radial-gradient(ellipse at center,#0E1433 0%,#040A10 70%)}
+.pod-map{margin:36px auto 0;max-width:1080px;border:1px solid #D4A24C55;padding:8px}
+.pod-map img{width:100%;display:block}
+.sis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px;margin:30px auto 0}
+.sis{text-align:center;border:1px solid #D4A24C55;background:#0B2A35aa;padding:26px 16px}
+.sis i{display:block;width:44px;height:44px;margin:0 auto 12px;border-radius:50%;border:1px solid var(--gold);box-shadow:0 0 0 6px #D4A24C22,0 0 0 13px #D4A24C11,0 0 22px #D4A24C66;background:radial-gradient(#F1D08A,#D4A24C 45%,transparent 50%)}
+.sis h3{font-size:22px;margin-bottom:2px}.sis p{font-size:16px;color:var(--mist)}
+.go-link{font-family:Cinzel;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+.wa{display:inline-flex;align-items:center;gap:10px;font-family:Inter;font-size:15px;color:#fff;background:#128C7E;border:1px solid #25D366;padding:12px 20px;text-decoration:none;border-radius:999px}
+.wa:hover{background:#25D366;color:#04210f}
+footer .wa{font-size:12px;padding:3px 10px;vertical-align:middle}
+footer .wa .wa-ic{width:14px;height:14px}
+footer a{color:var(--parch)}
+/* faq */
+details{border-bottom:1px solid #D4A24C33;padding:16px 0}
+summary{cursor:pointer;font-family:Cinzel;font-size:16px;letter-spacing:.06em;color:var(--parch)}
+details p{margin-top:10px;font-size:18px;color:#d6cfc1}
+.disc{background:#0B2A35;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:34px 0}
+.disc p{font-family:Inter;font-size:13.5px;line-height:1.7;color:#d9d3c6;max-width:1000px}
+.disc strong{color:var(--gold)}
+footer{padding:50px 0 80px;font-family:Inter;font-size:13px;color:var(--mist)}
+footer .logo{margin-bottom:14px}
+.ph{font-family:Inter;font-size:12px;color:var(--copper)}
+.sticky{position:fixed;right:20px;bottom:20px;z-index:60;display:none}
+.mock-banner{position:fixed;left:0;bottom:0;z-index:70;font-family:Inter;font-size:10.5px;background:#7A1F2B;color:#fff;padding:4px 10px;letter-spacing:.06em}
+@media (max-width:860px){
+ .l1{font-size:10.5px;letter-spacing:.1em}.l2{font-size:13px}.logo svg{width:24px}
+ body{font-size:18px}
+ .menu-btn{display:flex;position:relative;z-index:62}
+ nav{position:fixed;inset:0;z-index:61;background:#040A10;flex-direction:column;align-items:stretch;gap:0;padding:86px 28px 40px;overflow-y:auto;opacity:0;visibility:hidden;transition:.25s}
+ header.open nav{opacity:1;visibility:visible}
+ .nv-top{font-size:15px;padding:14px 0;border-bottom:1px solid #D4A24C22!important}
+ .nv-g{flex-wrap:wrap}.nv-g>.nv-top{flex:1}
+ .nv-tg{padding:14px 6px;border-bottom:1px solid #D4A24C22}
+ .nv-dd{position:static;opacity:1;visibility:visible;transform:none;display:none;box-shadow:none;border:0;border-left:1px solid #D4A24C55;margin:6px 0 10px 4px;min-width:0;width:100%;background:none}
+ .nv-g.open .nv-dd{display:block}
+ .nv-cta{margin:20px 0 0;text-align:center}
+ body.menu-open{overflow:hidden}
+ body.menu-open .sticky,body.menu-open .sona-fab,body.menu-open .sona-panel{display:none!important}
+ header.open{background:#040A10}
+ section{padding:76px 0}
+ .doors,.lineage,.mon-grid,.overview-step{grid-template-columns:1fr}
+ .fac-grid{grid-template-columns:1fr}
+ .sis-grid{grid-template-columns:1fr}
+ .passage .wrap,.pass-grid{grid-template-columns:1fr}.passage-fig{position:static}.fac,.fac:nth-child(4){grid-column:auto}
+ .loc{grid-template-columns:1fr}.beach-wide img{aspect-ratio:4/3}.map{height:360px}.aerial-cap{position:relative;bottom:0;margin-top:-40px}
+ .steps4{grid-template-columns:1fr 1fr}
+ .flow{padding:28px 20px}
+ .fields{grid-template-columns:1fr}.fields .full{grid-column:auto}
+ .pr{font-size:0;color:transparent}.pr.cur{font-size:10px;color:var(--gold);white-space:nowrap}
+ .hero{align-items:flex-end}
+ .hero .bg{background-position:68% center}
+ .hero::after{background:linear-gradient(0deg,#040A10 18%,#040A10c0 55%,#040A1040)}
+ .rings{left:70%;top:36%}
+ .sticky{display:block}
+ .scene{min-height:80vh}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* creation story */
+.cs-hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.cs-hero .bg{position:absolute;inset:0;background:url(#img-09-creation-hero) center/cover}
+.cs-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#040A10ee 0%,#040A10a0 45%,#040A1020 80%)}
+.cs-hero .wrap{position:relative;z-index:2;max-width:1180px}
+.cs-hero h1{max-width:700px;font-size:clamp(34px,4.6vw,56px)}.cs-hero p.sub{max-width:560px;font-size:22px}
+.cs-hero figcaption{position:absolute;right:16px;bottom:10px;z-index:3}
+.prose{max-width:780px;margin:0 auto}
+.prose p{font-size:20px;line-height:1.65}
+.prose h3{margin-top:34px}
+.prose .chapter{margin-top:46px}
+.chapter{font-family:Cinzel;color:var(--gold);letter-spacing:.24em;font-size:12px;text-transform:uppercase;display:block;margin-bottom:6px}
+.origin-fig{max-width:900px;margin:36px auto;border:1px solid #D4A24C55;padding:8px}
+.origin-fig img{width:100%;display:block}
+.team{background:radial-gradient(ellipse at top,#0B2A35 0%,#040A10 70%)}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}
+.tcard{border:1px solid #D4A24C55;background:#0E1433cc;padding:28px 24px;text-align:center;display:flex;flex-direction:column}
+.tcard .ph-photo{width:150px;height:150px;border-radius:50%;margin:0 auto 18px;border:1px solid var(--gold);box-shadow:0 0 0 7px #D4A24C1f,0 0 0 15px #D4A24C10;overflow:hidden;display:flex;align-items:center;justify-content:center;background:radial-gradient(#1E8C93,#0B2A35 70%)}
+.tcard .ph-photo img{width:100%;height:100%;object-fit:cover}
+.tcard .ph-photo b{font-family:Cinzel;font-size:46px;color:var(--gold);font-weight:400}
+.tcard h3{font-size:22px;margin-bottom:4px}
+.tcard .role{font-family:Inter;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--aqua);margin-bottom:14px}
+.tcard p{font-size:17px;text-align:left}
+.tcard ul{text-align:left;font-size:16.5px;padding-left:18px;margin:6px 0 12px}
+.tcard .src{font-family:Inter;font-size:11px;color:var(--mist);text-align:left;margin-top:auto}
+.tcard .wa{margin:14px auto 6px;font-size:13.5px}
+.timeline{position:relative;max-width:900px;margin:40px auto 0;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:1px;background:linear-gradient(#D4A24C,#1E8C93)}
+.tl{position:relative;margin-bottom:30px}
+.tl::before{content:"";position:absolute;left:-31px;top:6px;width:13px;height:13px;border-radius:50%;background:#040A10;border:1px solid var(--gold);box-shadow:0 0 0 5px #D4A24C22,0 0 12px #D4A24C88}
+.tl .yr{font-family:Cinzel;color:var(--gold);font-size:20px;letter-spacing:.08em}
+.tl h4{font-family:Cormorant Garamond;font-size:21px;font-weight:500;margin:2px 0 4px;color:var(--parch)}
+.tl p{font-size:17px;margin:0;color:var(--mist)}
+.tl .ref{font-family:Inter;font-size:12px;color:var(--mist)}
+.tl .ref a{color:var(--aqua)}
+.horizon{background:linear-gradient(#040A10,#0E1433 40%,#040A10)}
+.hyp-badge{display:inline-block;font-family:Inter;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);border:1px dashed var(--gold);padding:6px 14px;margin-bottom:14px}
+.hyp-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;margin-top:34px}
+.hyp-grid figure{margin:0;border:1px solid #D4A24C55;padding:8px}.hyp-grid img{width:100%;display:block}
+.cascade{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px;counter-reset:c}
+.cascade div{border-top:1px solid var(--gold);padding-top:14px;font-size:16.5px}
+.cascade div b{display:block;font-family:Cinzel;font-weight:400;color:var(--gold);font-size:14px;letter-spacing:.1em;margin-bottom:6px}
+.cascade div b::before{counter-increment:c;content:counter(c,upper-roman) " · "}
+.cascade div span{display:block;font-family:Inter;font-size:11px;color:var(--mist);margin-top:6px}
+.hyp-note{max-width:860px;margin:34px auto 0;border-left:2px solid var(--gold);padding:14px 20px;background:#0B2A3588;font-size:18px}
+.growth{background:radial-gradient(ellipse at center,#0E1433 0%,#040A10 70%)}
+.refs ol{font-family:Inter;font-size:13px;line-height:1.6;color:var(--mist);max-width:980px;margin:24px auto 0;padding-left:22px}
+.refs li{margin-bottom:8px}.refs a{color:var(--aqua);word-break:break-all}
+@media (max-width:900px){.team-grid,.hyp-grid{grid-template-columns:1fr}.cascade{grid-template-columns:1fr 1fr}.cs-hero h1{font-size:40px}}
+</style>
+<script>window.IMG={};</script>
+<script src="img/01-hero-dolphins-sonar.js"></script>
+<script src="img/09-creation-hero.js"></script>
+<script src="img/10-mitochondria-rejuvenating.js"></script>
+<script src="img/11-endocrine-constellation.js"></script>
+<script src="img/12-global-dolphin-pod-network.js"></script>
+<script src="img/cs-dr-xiaohuai-wang.js"></script>
+<script src="img/cs-sosdt4life-team.js"></script>
+</head>
+<body data-page="story">
+<header><div class="wrap">
+ <a class="logo" href="index.html"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" stroke="#D4A24C" stroke-width="1.3"><circle cx="20" cy="20" r="3" fill="#D4A24C"/><path d="M20 4c6 6 6 14 0 20-6-6-6-14 0-20z"/><path d="M36 20c-6 6-14 6-20 0 6-6 14-6 20 0z" transform="rotate(0 20 20)"/><path d="M4 20c6-6 14-6 20 0-6 6-14 6-20 0z"/><path d="M20 36c-6-6-6-14 0-20 6 6 6 14 0 20z"/><circle cx="20" cy="20" r="17" opacity=".5"/></svg><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
+ <nav id="mainnav" aria-label="Main"><a class="nv-top" href="index.html">Home</a><div class="nv-g"><a class="nv-top" href="index.html#journey">The Process</a><button class="nv-tg" aria-label="Show The Process links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#journey">Dolphin Sonar Journey</a><a href="index.html#facilities">Facilities</a><a href="index.html#signup">First Treatment</a></div></div><div class="nv-g" data-g="story"><a class="nv-top" href="creation-story.html">Our Story</a><button class="nv-tg" aria-label="Show Our Story links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="creation-story.html">Creation Story</a><a href="creation-story.html#team">Dr. Wang &amp; Team</a><a href="creation-story.html#research">Research Timeline</a><a href="index.html#lineage">Our Lineage</a></div></div><div class="nv-g"><a class="nv-top" href="index.html#monastic">Care</a><button class="nv-tg" aria-label="Show Care links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#monastic">Monastic Care</a><a href="index.html#passage">Conscious Passage</a></div></div><div class="nv-g"><a class="nv-top" href="index.html#estate">Places</a><button class="nv-tg" aria-label="Show Places links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="index.html#estate">The Estate · Location</a><a href="index.html#sister">Sister Centers</a></div></div><a class="nv-top" href="index.html#faq">FAQ</a><a class="nv-top" href="index.html#contact">Contact</a><a class="nv-top nv-cta" href="index.html#signup">First Treatment</a></nav>
+ <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
+</div></header>
+
+<section class="cs-hero" id="top"><div class="bg" role="img" aria-label="A dolphin leaping beneath a golden mandala at dawn"></div>
+ <div class="wrap"><span class="eyebrow">The Creation Story</span><h1>A doctor who listened to sound, and a lineage that listens to the heart.</h1>
+ <p class="sub">How four decades of oncology met a Dzogchen sanctuary on Florida's Gulf Coast, and how a pod of healing centers began to swim across the world.</p></div>
+ <figcaption>Artistic visualization</figcaption>
+</section>
+
+<section id="story"><div class="wrap"><div class="prose">
+ <span class="chapter">Chapter I</span><h2>The physician</h2>
+ <p>Prof. Dr. Xiaohuai Wang has spent more than forty years in clinical oncology. He earned his master's and medical degrees at the Fourth Military Medical University in Xi'an, was a Visiting Scholar at MD Anderson, and directed the Oncology Department of the Guangzhou Military Hospital.</p>
+ <p>Along the way he kept asking one quiet question: could cancer care be powerful and gentle at the same time? His answer became a life's work in sonodynamic therapy. A light- and sound-sensitive compound gathers in the body, and soft, low-intensity ultrasound awakens it. Dr. Wang went on to invent the SDT ultrasound bath used in his clinics. Today he leads SoSDT 4 LIFE in Guangzhou, China, where his team has practised SDT for more than a decade.</p>
+ <figure class="origin-fig"><img data-k="cs-sosdt4life-team" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Prof. Dr. Xiaohuai Wang with the SoSDT 4 LIFE clinical team in a hospital corridor"><figcaption>Prof. Wang with the SoSDT 4 LIFE team. Photo: cancertherapies.cc</figcaption></figure>
+ <span class="chapter">Chapter II</span><h2>The meeting</h2>
+ <p>Healing traditions find one another. AiYogi, AiYogiLAB and ARDTiLYS were built around a simple Dzogchen insight: the mind rests best when the body is held in kindness. When that path crossed Dr. Wang's, both sides recognized the same intention. One brought the science of sound; the other brought the sanctuary, the meditation, and a lineage of compassionate care. <span class="ph">[placeholder: the owner's account of how and when AiYogi / AiYogiLAB / ARDTiLYS first met Dr. Wang]</span></p>
+ <p>Out of that meeting came the Sonodynamic Cancer Center at AiYogi.ai Lab: Dr. Wang's protocol in a Dzogchen Florida recovery sanctuary on Manasota Key, offered free of charge to monastics.</p>
+ <span class="chapter" id="growth">Chapter III</span><h2>The pod</h2>
+ <p>Dolphins never travel alone. Our vision is a worldwide family of SDT centers that share one protocol, one standard of tenderness, and one sound, each rooted in its own landscape. Jody, our lead concierge, is helping that pod grow from shore to shore.</p>
+</div>
+ <figure class="origin-fig" style="max-width:1080px"><img data-k="12-global-dolphin-pod-network" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artistic map of a golden dolphin-pod network"><figcaption>Artistic visualization; node positions are symbolic.</figcaption></figure>
+ <div class="sis-grid">
+  <div class="sis"><i></i><h3>Bali</h3><p>Indonesia</p></div>
+  <div class="sis"><i></i><h3>Jakarta</h3><p>Indonesia</p></div>
+  <div class="sis"><i></i><h3>Sarasota</h3><p>Florida, USA</p></div>
+ </div>
+ <p class="center" style="margin-top:22px"><a class="go-link" href="index.html#sister">Our sister locations →</a></p>
+</div></section>
+
+<section class="team" id="team"><div class="wrap">
+ <div class="center"><span class="eyebrow">The Team</span><h2>The people behind the sound</h2></div>
+ <div class="team-grid">
+  <div class="tcard"><div class="ph-photo"><img data-k="cs-dr-xiaohuai-wang" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Prof. Dr. Xiaohuai Wang"></div>
+   <h3>Prof. Dr. Xiaohuai Wang</h3><div class="role">M.D. · Principal · SDT pioneer</div>
+   <ul><li>40+ years in clinical oncology</li><li>Inventor of the SDT ultrasound bath</li><li>MSc and MD, Fourth Military Medical University, Xi'an; Visiting Scholar, MD Anderson</li><li>Former Director of Oncology, Guangzhou Military Hospital</li></ul>
+   <div class="src">Bio per SoSDT 4 LIFE (cancertherapies.cc/our-team). Photo: cancertherapies.cc</div></div>
+  <div class="tcard"><div class="ph-photo"><b>LQ</b></div>
+   <h3>Dr. Lucy Qing Li</h3><div class="role">PhD · Research partner</div>
+   <p>Long-time research partner of Prof. Wang. She is a co-author of the 2012 refractory breast cancer report, first author of the 2014 esophageal and gastric study, and corresponding author of the 2020 pancreas case report (College of Engineering and Science, Victoria University, Melbourne).</p>
+   <div class="src">Per the published papers <sup>[<a href="#r5">5</a>, <a href="#r6">6</a>, <a href="#r7">7</a>]</sup>. <span class="ph">[placeholder: photo · current title]</span></div></div>
+  <div class="tcard"><div class="ph-photo"><b>J</b></div>
+   <h3>Jody</h3><div class="role">Lead Concierge · Partner in worldwide growth</div>
+   <p>Jody is your first voice and steady hand. She guides guests and monastics from the first message to the first treatment, and partners with Dr. Wang in bringing SDT centers to new shores around the world.</p>
+   <a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jody (Lead Concierge)</span></a>
+   <div class="src"><span class="ph">[placeholder: photo · short bio]</span></div></div>
+ </div>
+</div></section>
+
+<section id="research"><div class="wrap">
+ <div class="center"><span class="eyebrow">Research Timeline</span><h2>Thirty-five years of listening to sound</h2><p style="max-width:700px;margin:0 auto">From the first laboratory observation to Dr. Wang's clinical reports. Each step links to its published source.</p></div>
+ <div class="timeline">
+<div class="tl"><div class="yr">1989</div><h4>Sound meets light-sensitive molecules</h4><p>In Japan, Yumita, Umemura and colleagues report that hematoporphyrin, a light-sensitizing compound, also makes cells sensitive to ultrasound. The word "sonodynamic" is born.</p><div class="ref">Reference <sup>[<a href="#r1">1</a>]</sup></div></div>
+<div class="tl"><div class="yr">2008</div><h4>Dr. Wang's laboratory study</h4><p>Prof. Wang and colleagues study the tumoricidal effect of sonodynamic therapy on S-180 sarcoma in mice.</p><div class="ref">Reference <sup>[<a href="#r2">2</a>]</sup></div></div>
+<div class="tl"><div class="yr">2008</div><h4>First clinical report in advanced breast cancer</h4><p>Wang, Mitchell and Lewis present the primary clinical use of SDT for advanced breast cancer at the ASCO Annual Meeting.</p><div class="ref">Reference <sup>[<a href="#r3">3</a>]</sup></div></div>
+<div class="tl"><div class="yr">2009</div><h4>Sound and light together</h4><p>A report of three advanced breast carcinoma cases treated with combined sonodynamic and photodynamic therapy, published in <i>Integrative Cancer Therapies</i>.</p><div class="ref">Reference <sup>[<a href="#r4">4</a>]</sup></div></div>
+<div class="tl"><div class="yr">2012</div><h4>Refractory breast cancer, with Dr. Lucy Qing Li</h4><p>Wang, Li, Zhang, Luo and Mitchell report on sono- and photodynamic therapy in advanced refractory breast cancer (ASCO Breast Cancer Symposium).</p><div class="ref">Reference <sup>[<a href="#r5">5</a>]</sup></div></div>
+<div class="tl"><div class="yr">2014</div><h4>Esophageal and gastric cancers</h4><p>Dr. Lucy Qing Li is first author on the primary clinical use of sono-photo-dynamic therapy for advanced esophagocardiac and gastric adenocarcinoma.</p><div class="ref">Reference <sup>[<a href="#r6">6</a>]</sup></div></div>
+<div class="tl"><div class="yr">2020</div><h4>A pancreas case report</h4><p>Zhang, Li, Li, Wang and colleagues describe sono- and photodynamic therapy in an advanced pancreatic carcinoma case.</p><div class="ref">Reference <sup>[<a href="#r7">7</a>]</sup></div></div>
+<div class="tl"><div class="yr">2019 – 2022</div><h4>The wider field grows</h4><p>Independent reviews trace SDT's path toward clinical translation and its fast-growing research base.</p><div class="ref">Reference <sup>[<a href="#r8">8</a>, <a href="#r9">9</a>]</sup></div></div>
+ </div>
+</div></section>
+
+<section class="horizon" id="horizon"><div class="wrap">
+ <div class="center"><span class="hyp-badge">Hypothesis · not yet tested</span><h2>Theoretical Horizon: a hypothesis under exploration</h2>
+ <p style="max-width:760px;margin:0 auto">We like to wonder out loud. What follows is not a treatment claim. It is a question we hope research will one day answer.</p></div>
+ <div class="hyp-grid">
+  <div class="prose"><h3>Could gentle SDT help mitochondria renew themselves?</h3>
+  <p>We imagine that the brief, controlled burst of reactive oxygen species (ROS) produced during SDT might act as a hormetic signal for healthy cells, a small challenge that invites a stronger response. Basic science shows that mild ROS can trigger protective adaptation ("mitohormesis")<sup>[<a href="#r12">12</a>, <a href="#r13">13</a>]</sup>, and that the master regulator PGC-1α drives mitochondrial biogenesis and antioxidant defenses<sup>[<a href="#r10">10</a>, <a href="#r11">11</a>]</sup>.</p></div>
+  <figure><img data-k="10-mitochondria-rejuvenating" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artistic visualization: tired grey mitochondria becoming radiant gold"><figcaption>Artistic visualization</figcaption></figure>
+ </div>
+ <div class="hyp-grid">
+  <figure><img data-k="11-endocrine-constellation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Artistic visualization: a meditating figure with glowing gland constellation"><figcaption>Artistic visualization</figcaption></figure>
+  <div class="prose"><h3>…and could renewed mitochondria brighten the endocrine constellation?</h3>
+  <p>Every steroid hormone begins in the mitochondria: the first step of steroidogenesis, cholesterol to pregnenolone, happens on the inner mitochondrial membrane<sup>[<a href="#r15">15</a>]</sup>. NAD<sup>+</sup> and cellular energy decline with age<sup>[<a href="#r14">14</a>]</sup>, and cells clear worn mitochondria through mitophagy<sup>[<a href="#r16">16</a>]</sup>, a process that ROS help regulate<sup>[<a href="#r17">17</a>]</sup>. We wonder whether a cascade from cleaner, more numerous mitochondria to steadier hormone production could one day be measured.</p></div>
+ </div>
+ <div class="cascade">
+  <div><b>Signal</b>A brief, gentle ROS pulse during SDT<span>Hormesis <sup>[<a href="#r12">12</a>, <a href="#r13">13</a>]</sup></span></div>
+  <div><b>Renewal</b>Mitophagy clears worn mitochondria<span><sup>[<a href="#r16">16</a>, <a href="#r17">17</a>]</sup></span></div>
+  <div><b>Biogenesis</b>PGC-1α builds new mitochondria<span><sup>[<a href="#r10">10</a>, <a href="#r11">11</a>]</sup></span></div>
+  <div><b>Energy</b>NAD<sup>+</sup> / ATP restored<span><sup>[<a href="#r14">14</a>]</sup></span></div>
+  <div><b>Hormones</b>Mitochondrial steroidogenesis<span><sup>[<a href="#r15">15</a>]</sup></span></div>
+ </div>
+ <div class="hyp-note"><strong>Please read this as a hypothesis.</strong> No study has yet tested whether SDT rejuvenates mitochondria or improves endocrine function. The references describe the background biology only. We share this horizon because it inspires our research questions, not as a promise of benefit.</div>
+</div></section>
+
+<section class="refs" id="references"><div class="wrap">
+ <div class="center"><span class="eyebrow">References</span><h2>Sources</h2></div>
+ <ol>
+<li id="r1">Yumita N, Nishigaki R, Umemura K, Umemura S. Hematoporphyrin as a sensitizer of cell-damaging effect of ultrasound. <i>Jpn J Cancer Res</i>. 1989;80(3):219-222. <a href="https://doi.org/10.1111/j.1349-7006.1989.tb02295.x" target="_blank" rel="noopener">doi:10.1111/j.1349-7006.1989.tb02295.x</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/2470713/" target="_blank" rel="noopener">PMID 2470713</a></li>
+<li id="r2">Wang X, Lewis TJ, Mitchell D. The tumoricidal effect of sonodynamic therapy (SDT) on S-180 sarcoma in mice. <i>Integr Cancer Ther</i>. 2008;7(2):96-102. <a href="https://doi.org/10.1177/1534735408319065" target="_blank" rel="noopener">doi:10.1177/1534735408319065</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/18550890/" target="_blank" rel="noopener">PMID 18550890</a></li>
+<li id="r3">Wang XJ, Mitchell D, Lewis TJ. Primary clinical use of sonodynamic therapy (SDT) for advanced breast cancer. <i>J Clin Oncol</i>. 2008;26(15_suppl):12029. <a href="https://doi.org/10.1200/jco.2008.26.15_suppl.12029" target="_blank" rel="noopener">doi:10.1200/jco.2008.26.15_suppl.12029</a></li>
+<li id="r4">Wang X, Zhang W, Xu Z, Luo Y, Mitchell D, Moss RW. Sonodynamic and photodynamic therapy in advanced breast carcinoma: a report of 3 cases. <i>Integr Cancer Ther</i>. 2009;8(3):283-287. <a href="https://doi.org/10.1177/1534735409343693" target="_blank" rel="noopener">doi:10.1177/1534735409343693</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/19815599/" target="_blank" rel="noopener">PMID 19815599</a></li>
+<li id="r5">Wang X, Li LQ, Zhang W, Luo Y, Mitchell DG. Sonodynamic and photodynamic therapy in advanced refractory breast cancer. <i>J Clin Oncol</i>. 2012;30(27_suppl):118. <a href="https://doi.org/10.1200/jco.2012.30.27_suppl.118" target="_blank" rel="noopener">doi:10.1200/jco.2012.30.27_suppl.118</a></li>
+<li id="r6">Li LQ, Wang X, Zhang IW, Mitchell D. Primary clinical use of the sono-photo-dynamic therapy for advanced esophagocardiac and gastric adenocarcinoma. <i>J Clin Oncol</i>. 2014;32(15_suppl):e15024. <a href="https://doi.org/10.1200/jco.2014.32.15_suppl.e15024" target="_blank" rel="noopener">doi:10.1200/jco.2014.32.15_suppl.e15024</a></li>
+<li id="r7">Zhang W, Li K, Li LQ, Wang X, Bo X, Xu H. Sonodynamic and photodynamic therapy in advanced pancreas carcinoma: a case report. <i>Online J Complement Altern Med</i> (Iris Publishers). 2020;3(3). <a href="https://doi.org/10.33552/OJCAM.2019.03.000559" target="_blank" rel="noopener">doi:10.33552/OJCAM.2019.03.000559</a></li>
+<li id="r8">Lafond M, Yoshizawa S, Umemura S. Sonodynamic therapy: advances and challenges in clinical translation. <i>J Ultrasound Med</i>. 2019;38(3):567-580. <a href="https://doi.org/10.1002/jum.14733" target="_blank" rel="noopener">doi:10.1002/jum.14733</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/30338863/" target="_blank" rel="noopener">PMID 30338863</a></li>
+<li id="r9">Nowak KM, Schwartz MR, Breza VR, Price RJ. Sonodynamic therapy: rapid progress and new opportunities for non-invasive tumor cell killing with sound. <i>Cancer Lett</i>. 2022;532:215592. <a href="https://doi.org/10.1016/j.canlet.2022.215592" target="_blank" rel="noopener">doi:10.1016/j.canlet.2022.215592</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/35151824/" target="_blank" rel="noopener">PMID 35151824</a></li>
+<li id="r10">Wu Z, Puigserver P, Andersson U, et al. Mechanisms controlling mitochondrial biogenesis and respiration through the thermogenic coactivator PGC-1. <i>Cell</i>. 1999;98(1):115-124. <a href="https://doi.org/10.1016/S0092-8674(00)80611-X" target="_blank" rel="noopener">doi:10.1016/S0092-8674(00)80611-X</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/10412986/" target="_blank" rel="noopener">PMID 10412986</a></li>
+<li id="r11">St-Pierre J, Drori S, Uldry M, et al. Suppression of reactive oxygen species and neurodegeneration by the PGC-1 transcriptional coactivators. <i>Cell</i>. 2006;127(2):397-408. <a href="https://doi.org/10.1016/j.cell.2006.09.024" target="_blank" rel="noopener">doi:10.1016/j.cell.2006.09.024</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/17055439/" target="_blank" rel="noopener">PMID 17055439</a></li>
+<li id="r12">Ristow M, Schmeisser K. Mitohormesis: promoting health and lifespan by increased levels of reactive oxygen species (ROS). <i>Dose-Response</i>. 2014;12(2):288-341. <a href="https://doi.org/10.2203/dose-response.13-035.Ristow" target="_blank" rel="noopener">doi:10.2203/dose-response.13-035.Ristow</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/24910588/" target="_blank" rel="noopener">PMID 24910588</a></li>
+<li id="r13">Ristow M, Zarse K, Oberbach A, et al. Antioxidants prevent health-promoting effects of physical exercise in humans. <i>PNAS</i>. 2009;106(21):8665-8670. <a href="https://doi.org/10.1073/pnas.0903485106" target="_blank" rel="noopener">doi:10.1073/pnas.0903485106</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/19433800/" target="_blank" rel="noopener">PMID 19433800</a></li>
+<li id="r14">Verdin E. NAD<sup>+</sup> in aging, metabolism, and neurodegeneration. <i>Science</i>. 2015;350(6265):1208-1213. <a href="https://doi.org/10.1126/science.aac4854" target="_blank" rel="noopener">doi:10.1126/science.aac4854</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/26785480/" target="_blank" rel="noopener">PMID 26785480</a></li>
+<li id="r15">Miller WL. Steroid hormone synthesis in mitochondria. <i>Mol Cell Endocrinol</i>. 2013;379(1-2):62-73. <a href="https://doi.org/10.1016/j.mce.2013.04.014" target="_blank" rel="noopener">doi:10.1016/j.mce.2013.04.014</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/23628605/" target="_blank" rel="noopener">PMID 23628605</a></li>
+<li id="r16">Youle RJ, Narendra DP. Mechanisms of mitophagy. <i>Nat Rev Mol Cell Biol</i>. 2011;12(1):9-14. <a href="https://doi.org/10.1038/nrm3028" target="_blank" rel="noopener">doi:10.1038/nrm3028</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/21179058/" target="_blank" rel="noopener">PMID 21179058</a></li>
+<li id="r17">Scherz-Shouval R, Elazar Z. Regulation of autophagy by ROS: physiology and pathology. <i>Trends Biochem Sci</i>. 2011;36(1):30-38. <a href="https://doi.org/10.1016/j.tibs.2010.07.007" target="_blank" rel="noopener">doi:10.1016/j.tibs.2010.07.007</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/20728362/" target="_blank" rel="noopener">PMID 20728362</a></li>
+ </ol>
+ <p class="cap center" style="margin-top:18px">Team details for Prof. Wang are from SoSDT 4 LIFE (cancertherapies.cc). Images marked "Artistic visualization" are symbolic.</p>
+</div></section>
+
+<footer><div class="wrap">
+ <a class="logo" href="index.html#top"><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
+ <p>A Dzogchen Florida recovery sanctuary · A program of ARDTiLYS with AiYogi &amp; AiYogiLAB <span class="ph">[placeholder: legal entity]</span><br>Manasota Key, on Florida's Gulf Coast · DzogchenFlorida.com · ManasotaFortress.com · AiYogi.ai<br><span class="flinks"><a href="index.html#top">Home</a> · <a href="index.html#journey">The Process</a> · <a href="creation-story.html">Creation Story</a> · <a href="creation-story.html#team">Dr. Wang &amp; Team</a> · <a href="index.html#monastic">Monastic Care</a> · <a href="index.html#passage">Conscious Passage</a> · <a href="index.html#estate">The Estate</a> · <a href="index.html#sister">Sister Centers</a> · <a href="index.html#faq">FAQ</a> · <a href="index.html#contact">Contact</a> · <a href="index.html#signup">First Treatment</a></span><br><a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jody (Lead Concierge)</span></a> · Privacy · Terms <span class="ph">[placeholder]</span></p>
+ <p class="footline">SoSDT is offered as an integrative therapy; individual results vary.</p>
+</div></footer>
+<script id="navjs">
+(function(){const h=document.querySelector('header'),mb=document.querySelector('.menu-btn'),nav=document.getElementById('mainnav');
+const close=()=>{h.classList.remove('open');document.body.classList.remove('menu-open');mb.setAttribute('aria-expanded','false')};
+mb.addEventListener('click',()=>{const o=h.classList.toggle('open');document.body.classList.toggle('menu-open',o);mb.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('.nv-tg').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();const g=b.parentElement,o=!g.classList.contains('open');nav.querySelectorAll('.nv-g.open').forEach(x=>x!==g&&x.classList.remove('open'));g.classList.toggle('open',o);b.setAttribute('aria-expanded',o)}));
+document.addEventListener('click',e=>{if(!nav.contains(e.target))nav.querySelectorAll('.nv-g.open').forEach(x=>x.classList.remove('open'))});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){close();nav.querySelectorAll('.nv-g.open').forEach(x=>x.classList.remove('open'))}});
+const page=location.pathname.split('/').pop()||'index.html';
+const local=a=>{const u=new URL(a.getAttribute('href'),location.href);return (u.pathname.split('/').pop()||'index.html')===page?u.hash:null};
+document.querySelectorAll('a[href]').forEach(a=>{const hs=local(a);if(hs===null)return;a.addEventListener('click',e=>{const id=hs.slice(1)||'top',t=document.getElementById(id);if(!t)return;e.preventDefault();close();t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});history.replaceState(null,'','#'+id)})});
+const links=[...nav.querySelectorAll('a')],map={};
+links.forEach(a=>{const hs=local(a);if(hs===null)return;const id=hs.slice(1)||'top';if(document.getElementById(id))(map[id]=map[id]||[]).push(a)});
+const set=id=>{links.forEach(a=>a.classList.remove('active'));nav.querySelectorAll('.nv-g').forEach(g=>g.classList.remove('active'));(map[id]||[]).forEach(a=>{a.classList.add('active');const g=a.closest('.nv-g');if(g)g.classList.add('active')});if(document.body.dataset.page==='story'){const g=nav.querySelector('.nv-g[data-g=story]');if(g)g.classList.add('active')}};
+const ids=Object.keys(map);let cur=null;
+function spy(){const y=innerHeight*0.35;let best=null;ids.forEach(id=>{const r=document.getElementById(id).getBoundingClientRect();if(r.top<=y&&r.bottom>0&&(best===null||r.top>document.getElementById(best).getBoundingClientRect().top))best=id});if(best!==cur){cur=best;set(best)}}
+addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy();
+})();
+</script>
+<script src="voice/voice.js" defer></script>
+<script>
+  (function(){const R=v=>v.replace(/#img-([A-Za-z0-9_-]+)/g,(m,k)=>IMG[k]||m);
+  document.querySelectorAll('style').forEach(t=>{if(t.textContent.includes('#img-'))t.textContent=R(t.textContent)});
+  document.querySelectorAll('[style*="#img-"]').forEach(e=>e.setAttribute('style',R(e.getAttribute('style'))));
+  document.querySelectorAll('img[data-k]').forEach(e=>e.src=IMG[e.dataset.k]);
+  document.querySelectorAll('[data-img*="#img-"]').forEach(e=>e.dataset.img=R(e.dataset.img));})();
+  </script>
+  </body>
+</html>
