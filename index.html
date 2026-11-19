@@ -177,6 +177,35 @@ input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 
 .err{font-family:Inter;font-size:12.5px;color:var(--copper);margin-top:12px;min-height:1em}
 .overview-step{display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:center}
 .overview-step img{width:100%;border:1px solid #D4A24C33}
+
+/* oxygen + sdt */
+.oxygen{background:radial-gradient(ellipse at 50% 0%,#0B2A35 0%,#040A10 62%);overflow:hidden}
+.oxygen .wrap{position:relative;z-index:2}
+.ox-aura{position:absolute;inset:0;pointer-events:none;opacity:.55}
+.ox-aura svg{width:100%;height:100%;display:block}
+.ox-lead{max-width:760px;margin:0 0 8px;font-size:21px}
+.ox-pair{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:36px 0 8px}
+.ox-card{background:#06141ce6;border:1px solid #D4A24C44;padding:30px 30px 34px;position:relative}
+.ox-card::before{content:"";position:absolute;top:0;left:28px;right:28px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.7}
+.ox-card h3{font-size:20px;margin-bottom:.45em}
+.ox-card p{font-size:18.5px;color:#d6cfc1}
+.ox-kicker{font-family:Cinzel,serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua);margin-bottom:10px;display:block}
+.ox-timing{border:1px solid #D4A24C55;padding:36px 40px;margin:44px 0 48px;background:linear-gradient(180deg,#0E1433cc,#040A10d8)}
+.ox-timing h3{font-size:24px;font-weight:400;color:var(--gold)}
+.ox-timing p{font-size:19px;max-width:820px}
+.ox-stack{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:22px}
+.ox-item{border:1px solid #D4A24C33;background:#0B2A35aa;padding:22px 16px 26px;text-align:center}
+.ox-item h3{font-size:13.5px;letter-spacing:.1em;margin-bottom:10px}
+.ox-item p{font-size:15.5px;color:#d6cfc1}
+.ox-ask{font-size:17px;font-style:italic;color:var(--mist);max-width:760px;margin-top:26px}
+.steps-art{margin:40px auto 0;max-width:1080px}
+.steps-art svg{width:100%;height:auto;display:block}
+.door-geom .img{background:radial-gradient(ellipse at 50% 30%,#1E8C9344 0%,#040A10 70%)}
+.door-geom .img::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='90' r='28' fill='none' stroke='%23D4A24C' stroke-width='.6' opacity='.5'/%3E%3Ccircle cx='100' cy='90' r='48' fill='none' stroke='%23D4A24C' stroke-width='.4' opacity='.35'/%3E%3Ccircle cx='100' cy='90' r='68' fill='none' stroke='%235FD4CF' stroke-width='.3' opacity='.25'/%3E%3Ccircle cx='100' cy='90' r='3' fill='%23D4A24C'/%3E%3C/svg%3E") center 38%/70% no-repeat;opacity:.85}
+.scene-geom{background:radial-gradient(ellipse at 50% 28%,#163a44 0%,#040A10 68%)}
+.scene-geom .bg{background:none!important}
+.scene-geom .bg svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+
 /* arrival */
 .arrival{padding-top:0}
 .arr-aerial{margin:0;position:relative}
@@ -221,6 +250,7 @@ footer{padding:50px 0 80px;font-family:Inter;font-size:13px;color:var(--mist)}
 footer .logo{margin-bottom:14px}
 .ph{font-family:Inter;font-size:12px;color:var(--copper)}
 .mock-banner{position:fixed;left:0;bottom:0;z-index:70;font-family:Inter;font-size:10.5px;background:#7A1F2B;color:#fff;padding:4px 10px;letter-spacing:.06em}
+@media (max-width:1100px){.ox-stack{grid-template-columns:repeat(2,1fr);}.ox-item:last-child{grid-column:1/-1;max-width:420px;margin:0 auto;width:100%}}
 @media (max-width:860px){
  .l1{font-size:10.5px;letter-spacing:.1em}.l2{font-size:13px}.logo svg{width:24px}
  body{font-size:18px}
@@ -240,7 +270,7 @@ footer .logo{margin-bottom:14px}
  body.menu-open .sona-fab,body.menu-open .sona-panel{display:none!important}
  header.open{background:#040A10}
  section{padding:76px 0}
- .doors,.lineage,.mon-grid,.overview-step{grid-template-columns:1fr}
+ .doors,.lineage,.mon-grid,.overview-step,.ox-pair,.ox-stack{grid-template-columns:1fr}
  .fac-grid{grid-template-columns:1fr}
  .sis-grid{grid-template-columns:1fr}
  .passage .wrap,.pass-grid{grid-template-columns:1fr}.passage-fig{position:static}.fac,.fac:nth-child(4){grid-column:auto}
@@ -262,11 +292,9 @@ footer .logo{margin-bottom:14px}
 <script src="img/02-sound-bath-chamber.js"></script>
 <script src="img/03a-sensitizer-sublingual.js"></script>
 <script src="img/03b-sensitizer-iv.js"></script>
-<script src="img/03c-sensitizer-to-bath.js"></script>
 <script src="img/04-dolphin-sonar-beam.js"></script>
 <script src="img/05-mitochondria-glow.js"></script>
 <script src="img/06-cells-into-light.js"></script>
-<script src="img/07-overview-infographic.js"></script>
 <script src="img/08-facilities-collage.js"></script>
 <script src="img/12-global-dolphin-pod-network.js"></script>
 <script src="img/13-conscious-passage.js"></script>
@@ -288,7 +316,7 @@ footer .logo{margin-bottom:14px}
 
 <header><div class="wrap">
  <a class="logo" href="#top"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" stroke="#D4A24C" stroke-width="1.3"><circle cx="20" cy="20" r="3" fill="#D4A24C"/><path d="M20 4c6 6 6 14 0 20-6-6-6-14 0-20z"/><path d="M36 20c-6 6-14 6-20 0 6-6 14-6 20 0z" transform="rotate(0 20 20)"/><path d="M4 20c6-6 14-6 20 0-6 6-14 6-20 0z"/><path d="M20 36c-6-6-6-14 0-20 6 6 6 14 0 20z"/><circle cx="20" cy="20" r="17" opacity=".5"/></svg><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
- <nav id="mainnav" aria-label="Main"><a class="nv-top" href="#top">Home</a><div class="nv-g"><a class="nv-top" href="#journey">The Process</a><button class="nv-tg" aria-label="Show The Process links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#journey">Dolphin Sonar Journey</a><a href="#facilities">Facilities</a><a href="#signup">First Treatment</a></div></div><div class="nv-g" data-g="story"><a class="nv-top" href="creation-story.html">Our Story</a><button class="nv-tg" aria-label="Show Our Story links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="creation-story.html">Creation Story</a><a href="creation-story.html#founders">Founders Team</a><a href="creation-story.html#research">Research Timeline</a><a href="#lineage">Our Lineage</a></div></div><div class="nv-g"><a class="nv-top" href="#monastic">Care</a><button class="nv-tg" aria-label="Show Care links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#monastic">Monastic Care</a><a href="#passage">Conscious Passage</a></div></div><div class="nv-g"><a class="nv-top" href="#estate">Places</a><button class="nv-tg" aria-label="Show Places links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#estate">The Estate · Location</a><a href="#sister">Sister Centers</a></div></div><a class="nv-top" href="#faq">FAQ</a><a class="nv-top" href="#contact">Contact</a><a class="nv-top nv-cta" href="#signup">First Treatment</a></nav>
+ <nav id="mainnav" aria-label="Main"><a class="nv-top" href="#top">Home</a><div class="nv-g"><a class="nv-top" href="#journey">The Process</a><button class="nv-tg" aria-label="Show The Process links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#journey">Dolphin Sonar Journey</a><a href="#facilities">Facilities</a><a href="#oxygen">HBOT + SDT</a><a href="#signup">First Treatment</a></div></div><div class="nv-g" data-g="story"><a class="nv-top" href="creation-story.html">Our Story</a><button class="nv-tg" aria-label="Show Our Story links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="creation-story.html">Creation Story</a><a href="creation-story.html#founders">Founders Team</a><a href="creation-story.html#research">Research Timeline</a><a href="#lineage">Our Lineage</a></div></div><div class="nv-g"><a class="nv-top" href="#monastic">Care</a><button class="nv-tg" aria-label="Show Care links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#monastic">Monastic Care</a><a href="#passage">Conscious Passage</a></div></div><div class="nv-g"><a class="nv-top" href="#estate">Places</a><button class="nv-tg" aria-label="Show Places links" aria-expanded="false"><svg class="car" viewBox="0 0 10 6" width="9" height="6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></button><div class="nv-dd"><a href="#estate">The Estate · Location</a><a href="#sister">Sister Centers</a></div></div><a class="nv-top" href="#faq">FAQ</a><a class="nv-top" href="#contact">Contact</a><a class="nv-top nv-cta" href="#signup">First Treatment</a></nav>
  <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
 </div></header>
 
@@ -310,32 +338,91 @@ footer .logo{margin-bottom:14px}
  </div>
 </section>
 
-<div class="journey-intro" id="journey"><div class="wrap center"><span class="eyebrow">How SoSDT works</span><h2>The Dolphin Sonar Journey</h2><p style="max-width:680px;margin:0 auto">A visual meditation on how SoSDT works: sound, light, and the body's own lamps.</p></div></div>
+<div class="journey-intro" id="journey"><div class="wrap center"><span class="eyebrow">How SoSDT works</span><h2>The Dolphin Sonar Journey</h2><p style="max-width:740px;margin:0 auto">Four stages: chlorophyll is received, a hyperbaric session floods the tissues with oxygen, the SDT bath awakens that chlorophyll with low-intensity ultrasound in a whole-body immersion tank, and the sacred atmosphere of the estate holds the work — as setting, not as the treatment itself.</p></div></div>
 <div class="journey">
- <div class="scene" id="sens"><div class="bg" id="sensbg" style="background-image:url(#img-03a-sensitizer-sublingual)"></div><div class="wrap"><div class="txt"><span class="num">SCENE I</span><h2>The Sensitizer Is Received</h2><div class="toggle"><button class="on" data-img="#img-03a-sensitizer-sublingual">Sublingual tablet</button><button data-img="#img-03b-sensitizer-iv">IV infusion</button></div><p>Depending on your protocol it is a small tablet dissolved under the tongue, or a gentle IV infusion while you rest. Like light carried on a river, it travels toward the cells while you rest in stillness, sit in practice, or walk the turtle beach.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-02-sound-bath-chamber)"></div><div class="wrap"><div class="txt"><span class="num">SCENE II</span><h2>The Sound Bath</h2><p>You rest in the sound chamber while bowls and mantra hold the room, and our clinical team guides the focused-sound session.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-04-dolphin-sonar-beam)"></div><div class="wrap"><div class="txt"><span class="num">SCENE III</span><h2>The Focused Echo</h2><p>Like a dolphin's sonar, focused ultrasound gathers gentle sound to one point. It awakens the sensitizer only where the sound converges.</p></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-05-mitochondria-glow)"></div><div class="wrap"><div class="txt"><span class="num">SCENE IV</span><h2>The Lamps Within</h2><p>Inside every cell, mitochondria are the lamps. When sound awakens the sensitizer, it acts here, on the lamps of the cells that have lost their way.</p><span class="art">Artistic visualization</span></div></div></div>
- <div class="scene"><div class="bg" style="background-image:url(#img-06-cells-into-light)"></div><div class="wrap"><div class="txt"><span class="num">SCENE V</span><h2>Into Light</h2><p>In this vision, focused sound meets the cells that have lost their way and releases them into light, while the healthy tissue around them rests.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene" id="sens"><div class="bg" id="sensbg" style="background-image:url(#img-03a-sensitizer-sublingual)"></div><div class="wrap"><div class="txt"><span class="num">SCENE I · SENSITIZER</span><h2>Chlorophyll Is Received</h2><div class="toggle"><button class="on" data-img="#img-03a-sensitizer-sublingual">Under the tongue</button><button data-img="#img-03b-sensitizer-iv">IV infusion</button></div><p>First, chlorophyll — a light- and sound-sensitive sensitizer — is received as a small tablet dissolved under the tongue, or as a gentle IV infusion, depending on your protocol. Like light carried on a river, it travels toward the cells while you rest in stillness, sit in practice, or walk the turtle beach.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene scene-geom" id="hbot-scene"><div class="bg" aria-hidden="true"><svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+ <radialGradient id="hb" cx="50%" cy="32%" r="55%"><stop offset="0%" stop-color="#1E8C93" stop-opacity=".35"/><stop offset="55%" stop-color="#0B2A35" stop-opacity=".2"/><stop offset="100%" stop-color="#040A10" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#hb)"/>
+<g fill="none" transform="translate(800,340)">
+ <circle r="6" fill="#D4A24C"/>
+ <g stroke="#D4A24C" stroke-width="1.1" opacity=".7">
+  <circle r="54"/><circle r="108"/><circle r="170"/>
+ </g>
+ <g stroke="#5FD4CF" stroke-width=".7" opacity=".45">
+  <circle r="230"/><circle r="300"/><circle r="380"/>
+ </g>
+ <g stroke="#D4A24C" stroke-width=".8" opacity=".4">
+  <circle cx="-62" r="108"/><circle cx="62" r="108"/>
+ </g>
+ <text y="8" text-anchor="middle" fill="#F1D08A" font-family="Cinzel,serif" font-size="28" letter-spacing="8" opacity=".85">O₂</text>
+</g>
+</svg></div><div class="wrap"><div class="txt"><span class="num">SCENE II · HYPERBARIC OXYGEN</span><h2>The Raw-Material Flood</h2><p>Then the hyperbaric session. Under gentle pressure, blood and tissue dissolve more oxygen than ordinary breathing can carry. Tumors often live in hypoxia; this stage fills the well that the sound will later use.</p></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-04-dolphin-sonar-beam)"></div><div class="wrap"><div class="txt"><span class="num">SCENE III · THE SDT BATH</span><h2>The Immersion Tank</h2><p>The core medical treatment. You enter a whole-body immersion tank, where low-intensity, non-thermal ultrasound awakens the chlorophyll. Like a dolphin's sonar, the sound gathers with care, and where it converges, oxygen becomes reactive oxygen species — chiefly singlet oxygen — inside the tumor.</p><span class="art">Artistic visualization · a metaphor for focused ultrasound, not a use of dolphins</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-05-mitochondria-glow)"></div><div class="wrap"><div class="txt"><span class="num">WITHIN THE SDT BATH</span><h2>The Lamps Within</h2><p>Inside every cell, mitochondria are the lamps. When the ultrasound of the SDT bath awakens the chlorophyll, it acts here, on the lamps of the cells that have lost their way.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-06-cells-into-light)"></div><div class="wrap"><div class="txt"><span class="num">WITHIN THE SDT BATH</span><h2>Into Light</h2><p>In this vision, the focused ultrasound of the SDT bath meets the cells that have lost their way and releases them into light, while the healthy tissue around them rests.</p><span class="art">Artistic visualization</span></div></div></div>
+ <div class="scene"><div class="bg" style="background-image:url(#img-02-sound-bath-chamber)"></div><div class="wrap"><div class="txt"><span class="num">SCENE IV · ADJUNCTS</span><h2>The Atmosphere Around the Work</h2><p>Around the medical treatment, the estate offers a contemplative field: sacred design, the dolphin-sonar image, and the ancient sound of the lineages — mantra, drum and bell, the bronze bowl. These are spiritually and aesthetically supporting elements. They are not the SDT bath, and they are not the treatment itself.</p><span class="art">Artistic visualization of adjunct atmosphere — not the treatment</span></div></div></div>
 </div>
 
 
 <section><div class="wrap">
  <div class="doors">
   <a class="door" href="#monastic"><div class="img" style="background-image:url(#img-ay-swami-beach-dawn)"></div><span class="tag">Free for monastics</span><span class="eyebrow">For Monastics</span><h2>Care for those who gave their lives to practice.</h2><p>Ordained monks, nuns, and lifelong renunciates may inquire about free care in residence.</p><span class="go">Inquire freely →</span></a>
-  <a class="door" href="#signup"><div class="img" style="background-image:url(#img-03c-sensitizer-to-bath)"></div><span class="eyebrow">For Everyone Else</span><h2>Your first treatment, step by step.</h2><p>Begin with a simple overview, then request your first SoSDT session. This is a request, not a booking.</p><span class="go">Begin the journey →</span></a>
+  <a class="door door-geom" href="#signup"><div class="img" aria-hidden="true"></div><span class="eyebrow">For Everyone Else</span><h2>Your first treatment, step by step.</h2><p>Begin with a simple overview, then request your first SoSDT session. This is a request, not a booking.</p><span class="go">Begin the journey →</span></a>
  </div>
 </div></section>
 
 <section class="overview"><div class="wrap center">
  <span class="eyebrow">The overview</span>
- <h2>Four movements of the echo</h2>
- <div class="info"><img data-k="07-overview-infographic" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Stylized infographic: vessel, dolphin, singing bowl, lotus"></div>
+ <h2>Four stages of the protocol</h2>
+ <div class="steps-art" aria-hidden="true"><svg viewBox="0 0 1080 280" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <filter id="gs"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g fill="none" stroke="#D4A24C" stroke-width=".4" opacity=".25">
+ <circle cx="540" cy="140" r="90"/><circle cx="540" cy="140" r="130"/><circle cx="540" cy="140" r="170"/>
+</g>
+<path d="M150 140 H930" stroke="#D4A24C" stroke-width="1" opacity=".45"/>
+<!-- 1 vessel / chlorophyll -->
+<g transform="translate(150,140)">
+ <circle r="58" fill="#040A10" stroke="#D4A24C" stroke-width="1.2"/>
+ <path d="M-10,-28 C-10,-28 -18,-8 -18,4 c0,16 8,28 18,28 s18,-12 18,-28 C8,-8 0,-28 0,-28 z" fill="none" stroke="#5FD4CF" stroke-width="1.6"/>
+ <path d="M-10,-28 C-2,-16 6,-16 14,-8" fill="none" stroke="#D4A24C" stroke-width="1.1"/>
+ <circle cy="8" r="3" fill="#5FD4CF"/>
+</g>
+<!-- 2 O2 -->
+<g transform="translate(430,140)">
+ <circle r="58" fill="#040A10" stroke="#D4A24C" stroke-width="1.2"/>
+ <circle cx="-12" r="16" fill="none" stroke="#5FD4CF" stroke-width="1.5"/>
+ <circle cx="12" r="16" fill="none" stroke="#5FD4CF" stroke-width="1.5"/>
+ <circle r="3" fill="#D4A24C"/>
+</g>
+<!-- 3 immersion tank + ultrasound waves -->
+<g transform="translate(710,140)">
+ <circle r="58" fill="#040A10" stroke="#D4A24C" stroke-width="1.2"/>
+ <ellipse cx="0" cy="10" rx="28" ry="10" fill="none" stroke="#5FD4CF" stroke-width="1.5"/>
+ <path d="M-28,10 C-28,28 -16,34 0,34 S28,28 28,10" fill="none" stroke="#5FD4CF" stroke-width="1.5"/>
+ <path d="M-18,-8 Q-9,-20 0,-8 Q9,4 18,-8" fill="none" stroke="#D4A24C" stroke-width="1.3"/>
+ <path d="M-12,-20 Q-6,-30 0,-20 Q6,-10 12,-20" fill="none" stroke="#D4A24C" stroke-width="1" opacity=".7"/>
+</g>
+<!-- 4 lotus / atmosphere -->
+<g transform="translate(990,140)">
+ <circle r="58" fill="#040A10" stroke="#D4A24C" stroke-width="1.2"/>
+ <g stroke="#5FD4CF" stroke-width="1.3" fill="none">
+  <path d="M0,18 C-6,4 -16,-4 -8,-16 C-2,-8 2,-8 8,-16 C16,-4 6,4 0,18z"/>
+  <path d="M0,18 C-14,6 -22,8 -22,-2 C-10,0 -4,8 0,18z"/>
+  <path d="M0,18 C14,6 22,8 22,-2 C10,0 4,8 0,18z"/>
+ </g>
+ <circle cy="-2" r="2.2" fill="#D4A24C"/>
+</g>
+</svg></div>
  <div class="steps4">
-  <div><b>I · Sensitizer</b>A sublingual tablet or IV, under protocol.</div>
-  <div><b>II · Sonar</b>Focused sound, gathered with care, like a dolphin's echolocation.</div>
-  <div><b>III · Bath</b>You rest in the sound chamber while bowls and mantra hold the room.</div>
-  <div><b>IV · Return</b>Hyperbaric, sauna, movement, PEMF, and silence.</div>
+  <div><b>I · Sensitizer</b>Chlorophyll, taken under the tongue or by IV, under protocol.</div>
+  <div><b>II · Hyperbaric oxygen</b>The raw-material flood: dissolved oxygen, ready for the sound.</div>
+  <div><b>III · The SDT bath</b>Low-intensity, non-thermal ultrasound in a whole-body immersion tank — the core medical treatment.</div>
+  <div><b>IV · Adjuncts</b>Sacred design, the dolphin-sonar image, and ancient sound, as supporting atmosphere, not the treatment.</div>
  </div>
 </div></section>
 
@@ -345,7 +432,7 @@ footer .logo{margin-bottom:14px}
   <span class="eyebrow">Ancient Sound → Modern SoSDT</span>
   <h2>From the first sound to the focused echo.</h2>
   <blockquote>In Bön Dzogchen, the natural state shows itself as sound, light, and rays. Today, focused ultrasound is studied in sonodynamic therapy. We hold both with respect.</blockquote>
-  <p>Mantra, drum and bell, and the bronze bowl soften fixation and open awareness. A dolphin sees with sound. The Sonodynamic Cancer Center at AiYogi.ai Lab is a pioneering program in the USA from <b>ARDTiLYS</b>, <b>AiYogi</b>, and <b>AiYogiLAB</b>, and it brings lineage sound and SoSDT into a single contemplative setting.</p>
+  <p>Mantra, drum and bell, and the bronze bowl soften fixation and open awareness. They live here as supporting atmosphere, not as the treatment itself. The treatment is sonodynamic: chlorophyll, oxygen, and the ultrasound immersion bath. A dolphin sees with sound — our image for that precise ultrasound. The Sonodynamic Cancer Center at AiYogi.ai Lab is a pioneering program in the USA from <b>ARDTiLYS</b>, <b>AiYogi</b>, and <b>AiYogiLAB</b>, and it holds lineage sound and SoSDT in one contemplative setting.</p>
  </div>
 </div></section>
 
@@ -374,15 +461,62 @@ footer .logo{margin-bottom:14px}
 <section id="facilities"><div class="wrap">
  <span class="eyebrow">The Fortress</span>
  <h2>Serious infrastructure for deep recovery.</h2>
- <p style="max-width:760px">This is not a spa. It is a fortress of silence, built on 49 pilings above a protected turtle-nesting beach where night stays dark by law and dolphins pass close to shore.</p>
+ <p style="max-width:760px">This is not a spa. It is a fortress of silence, built on 49 pilings above a protected turtle-nesting beach where night stays dark by law and dolphins pass close to shore. Hyperbaric oxygen and PEMF stand with the gym and saunas as the on-site stack; <a href="#oxygen" style="color:var(--gold)">see why HBOT pairs with SoSDT</a>.</p>
  <div class="fac-grid">
   <div class="fac"><div class="ph" style="background-image:url(#img-mf-gym-mirrors)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Professional Gym</h3><p>Hand-poured art-epoxy ocean floor and floor-to-ceiling mirrors. Gentle, guided movement for recovery.</p></div></div>
-  <div class="fac"><div class="ph" style="background-image:url(#img-08-facilities-collage);background-position:0 0;background-size:200%"></div><div class="b"><span class="real" style="color:var(--copper)">Artistic visualization · real photo needed</span><h3>Hyperbaric Chamber</h3><p>Oxygen under gentle pressure, a natural partner to SoSDT, which works through oxygen inside the cells.</p><span class="ph-note">[placeholder: real H-bot photo, chamber type, supervision]</span></div></div>
+  <div class="fac"><div class="ph" style="background-image:url(#img-08-facilities-collage);background-position:0 0;background-size:200%"></div><div class="b"><span class="real" style="color:var(--copper)">Artistic visualization · real photo needed</span><h3>Hyperbaric Chamber</h3><p>Oxygen under gentle pressure: the raw-material flood that precedes the SDT bath, sharing the same singlet-oxygen chemistry.</p><span class="ph-note">[placeholder: real H-bot photo, chamber type, supervision]</span></div></div>
   <div class="fac"><div class="ph" style="background-image:url(#img-mf-grotto-sauna)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Two Saunas &amp; the Grotto</h3><p>Two saunas, including the sauna/gym/media room, and the lantern-lit grotto.</p></div></div>
   <div class="fac"><div class="ph" style="background-image:url(#img-ay-shenten-pemf-session)"></div><div class="b"><span class="real">Real photo · Shenten Dargye Ling</span><h3>PEMF</h3><p>Pulsed electromagnetic field sessions, gentle fields that support rest and recovery.</p><span class="ph-note">[placeholder: confirm a PEMF unit is installed on site]</span></div></div>
   <div class="fac"><div class="ph" style="background-image:url(#img-mf-float-tank)"></div><div class="b"><span class="real">Real photo · on site</span><h3>Float Suite &amp; Grounds</h3><p>A sensory-deprivation float suite in total darkness and silence, plus three pools, a zen garden, and the turtle beach.</p></div></div>
  </div>
 </div></section>
+
+
+<section class="oxygen" id="oxygen">
+ <div class="ox-aura" aria-hidden="true"><svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<defs><radialGradient id="og" cx="50%" cy="30%" r="60%"><stop offset="0%" stop-color="#5FD4CF" stop-opacity=".12"/><stop offset="100%" stop-color="#040A10" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="800" fill="url(#og)"/>
+<g fill="none" stroke="#D4A24C" stroke-width=".6" opacity=".35" transform="translate(600,220)">
+ <circle r="40"/><circle r="80"/><circle r="120"/><circle r="160"/><circle r="200"/>
+ <circle cx="-46" r="80"/><circle cx="46" r="80"/>
+</g>
+<g fill="none" stroke="#5FD4CF" stroke-width=".4" opacity=".25" transform="translate(600,220)">
+ <circle r="240"/><circle r="300"/>
+</g>
+</svg></div>
+ <div class="wrap">
+  <span class="eyebrow">HBOT + SoSDT</span>
+  <h2>The flood, and the targeting.</h2>
+  <p class="ox-lead">Sonodynamic therapy and hyperbaric oxygen share one chemistry: singlet oxygen, a brief, luminous form of the air we breathe. Placed in sequence, they form a single rationale — first the raw-material flood, then the targeting system. This is why the hyperbaric session is the second stage of the protocol, just before the SDT bath. It is a careful pairing, not a promise of outcome.</p>
+  <div class="ox-pair">
+   <div class="ox-card">
+    <span class="ox-kicker">Stage II · The flood</span>
+    <h3>Hyperbaric oxygen</h3>
+    <p>Under gentle pressure, the blood and tissues dissolve more oxygen than ordinary breathing can carry. This is the raw-material flood. Many tumors live in hypoxia, a low-oxygen dark; more dissolved oxygen can mean more of the element the sound will later use, where it is aimed.</p>
+   </div>
+   <div class="ox-card">
+    <span class="ox-kicker">Stage III · The targeting</span>
+    <h3>The SDT bath</h3>
+    <p>Chlorophyll, the sensitizer, has already gathered in the body's most vulnerable cells. In a whole-body immersion tank, low-intensity, non-thermal ultrasound awakens it. Where the sound converges, oxygen is converted into reactive oxygen species, chiefly singlet oxygen, inside the tumor. Hyperbaric oxygen fills the well. The ultrasound aims the spark.</p>
+   </div>
+  </div>
+  <div class="ox-timing">
+   <span class="eyebrow">The timing rule</span>
+   <h3>After the session, not before.</h3>
+   <p>High-dose antioxidants can quench the very oxygen species a session is meant to awaken. Please do not take them in the couple of hours before an SDT or hyperbaric session. Once the work is done, they become allies: front-load the stack afterward, so the body can settle. Ask your care team about doses and timing for your own protocol.</p>
+  </div>
+  <span class="eyebrow">The recommended stack</span>
+  <h2 style="font-size:clamp(22px,2.4vw,32px)">Five companions, after the echo.</h2>
+  <div class="ox-stack">
+   <div class="ox-item"><h3>Vitamin C</h3><p>A familiar, water-bright antioxidant, taken after the session.</p></div>
+   <div class="ox-item"><h3>NAC</h3><p>N-acetylcysteine, which feeds glutathione, the body's own deep reserve.</p></div>
+   <div class="ox-item"><h3>Alpha-lipoic acid</h3><p>A versatile companion that works in both water and fat.</p></div>
+   <div class="ox-item"><h3>CoQ10</h3><p>Close to the mitochondrial lamps, where the cell keeps its fire.</p></div>
+   <div class="ox-item"><h3>Astaxanthin &amp; Lycopene</h3><p>Carotenoids among the strongest quenchers of singlet oxygen.</p></div>
+  </div>
+  <p class="ox-ask">Ask your care team about the doses that belong in your own plan.</p>
+ </div>
+</section>
 
 <section class="monastic" id="monastic"><div class="wrap mon-grid">
  <div class="mon-photos">
@@ -437,7 +571,7 @@ footer .logo{margin-bottom:14px}
   <div class="progress" id="prog"></div>
 
   <div class="step on" data-t="Overview">
-   <div class="overview-step" style="grid-template-columns:1fr"><div><h3>Before you begin</h3><p style="font-size:18px">Sensitizer → Sonar → Bath → Return. A coordinator will contact you to welcome you, answer your questions, and shape your first visit.</p></div></div>
+   <div class="overview-step" style="grid-template-columns:1fr"><div><h3>Before you begin</h3><p style="font-size:18px">Sensitizer (chlorophyll) → Hyperbaric oxygen → The SDT bath → Adjuncts. A coordinator will contact you to welcome you, answer your questions, and shape your first visit.</p></div></div>
   </div>
 
   <div class="step" data-t="About you">
@@ -464,7 +598,7 @@ footer .logo{margin-bottom:14px}
   <div class="step" data-t="Preferences">
    <h3>Preferences</h3><p class="hint">Choose what interests you. The final plan is set clinically.</p>
    <label>Areas of interest <span class="req">*</span></label>
-   <div class="chips" id="interest"><label><input type="checkbox" name="int" value="SoSDT">SoSDT session</label><label><input type="checkbox" name="int" value="Hyperbaric">Hyperbaric</label><label><input type="checkbox" name="int" value="Sauna">Sauna</label><label><input type="checkbox" name="int" value="Gym">Gym / movement</label><label><input type="checkbox" name="int" value="PEMF">PEMF</label><label><input type="checkbox" name="int" value="Sound bath">Sound-bath only</label></div>
+   <div class="chips" id="interest"><label><input type="checkbox" name="int" value="SoSDT">SoSDT session</label><label><input type="checkbox" name="int" value="Hyperbaric">Hyperbaric</label><label><input type="checkbox" name="int" value="Sauna">Sauna</label><label><input type="checkbox" name="int" value="Gym">Gym / movement</label><label><input type="checkbox" name="int" value="PEMF">PEMF</label><label><input type="checkbox" name="int" value="Estate atmosphere">Estate atmosphere</label></div>
    <div class="fields" style="margin-top:18px">
     <label>Sensitizer route preference (informational)<select name="route"><option>No preference</option><option>Sublingual tablet</option><option>IV</option><option>Not sure</option></select></label>
     <label>Preferred language<select name="lang"><option>English</option><option>Español</option><option>Português</option><option>Tibetan</option><option>Other</option></select></label>
@@ -503,9 +637,11 @@ footer .logo{margin-bottom:14px}
 
 <section id="faq"><div class="wrap" style="max-width:860px">
  <span class="eyebrow">FAQ</span><h2>Honest answers</h2>
- <details open><summary>What is SoSDT?</summary><p>A sensitizer is received first and gathers in the body's most vulnerable cells. Gentle focused ultrasound then awakens it exactly where the sound converges, releasing reactive oxygen inside those cells and acting on their mitochondria. The sound is quiet and non-invasive.</p></details>
+ <details open><summary>What is SoSDT?</summary><p>Sonodynamic therapy in four stages. First, chlorophyll — the sensitizer — is taken under the tongue or by IV, and gathers in the body's most vulnerable cells. Second, a hyperbaric oxygen session floods the tissues with dissolved oxygen, the raw material. Third, the SDT bath: you enter a whole-body immersion tank, where low-intensity, non-thermal ultrasound awakens the chlorophyll, converting oxygen into reactive oxygen species, chiefly singlet oxygen, inside the tumor. Fourth, adjuncts — sacred design, the dolphin-sonar image, and the ancient sound of the lineages — hold a contemplative atmosphere; they are not the treatment itself. The ultrasound is quiet and non-invasive.</p></details>
  <details><summary>Can I continue my current treatments?</summary><p>Yes. SoSDT is integrative, and it sits alongside the care you already receive. We're glad to coordinate with your doctors.</p></details>
- <details><summary>How is the sensitizer given?</summary><p>As a sublingual tablet or an IV infusion, depending on your plan. <span class="ph">[placeholder: agent and protocol]</span></p></details>
+ <details><summary>How is the sensitizer given?</summary><p>As chlorophyll, taken under the tongue or by IV, depending on your plan.</p></details>
+ <details><summary>How do hyperbaric oxygen and SoSDT work together?</summary><p>They share the same oxidative chemistry, singlet oxygen. Hyperbaric oxygen is the raw-material flood; the SDT bath is the targeting system. Tumors are often hypoxic, so more dissolved oxygen can mean more of that chemistry where the sound is aimed. <a href="#oxygen">Read the full pairing, and the antioxidant timing rule.</a></p></details>
+ <details><summary>Should I take antioxidants around sessions?</summary><p>Please do not take high-dose antioxidants in the couple of hours before an SDT or hyperbaric session; they can quench the oxygen species the session is meant to awaken. Front-load them afterward. The recommended stack is vitamin C, NAC (which feeds glutathione), alpha-lipoic acid, CoQ10, and the carotenoids astaxanthin and lycopene. Ask your care team about doses for your own protocol. <a href="#oxygen">See the oxygen and sound section.</a></p></details>
  <details><summary>Is care really free for monastics?</summary><p>Yes, for eligible monastics. <span class="ph">[placeholder: eligibility and limits]</span></p></details>
  <details><summary>Why the dolphin?</summary><p>Dolphins navigate with focused sound. That is our image for gentle, precise ultrasound, and dolphins visit the shore of our Key.</p></details>
 </div></section>
@@ -519,7 +655,7 @@ footer .logo{margin-bottom:14px}
 
 <footer><div class="wrap">
  <a class="logo" href="#top"><span class="lk"><span class="l1">SONODYNAMIC CANCER CENTER</span><span class="l2">at AiYogi.ai Lab</span></span></a>
- <p>A Dzogchen Florida recovery sanctuary · A program of ARDTiLYS with AiYogi &amp; AiYogiLAB <span class="ph">[placeholder: legal entity]</span><br>Manasota Key, on Florida's Gulf Coast · DzogchenFlorida.com · ManasotaFortress.com · AiYogi.ai<br><span class="flinks"><a href="#top">Home</a> · <a href="#journey">The Process</a> · <a href="creation-story.html">Creation Story</a> · <a href="creation-story.html#founders">Founders Team</a> · <a href="#monastic">Monastic Care</a> · <a href="#passage">Conscious Passage</a> · <a href="#estate">The Estate</a> · <a href="#sister">Sister Centers</a> · <a href="#faq">FAQ</a> · <a href="#contact">Contact</a> · <a href="#signup">First Treatment</a></span><br><a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jodie (Lead Concierge)</span></a> · Privacy · Terms <span class="ph">[placeholder]</span></p>
+ <p>A Dzogchen Florida recovery sanctuary · A program of ARDTiLYS with AiYogi &amp; AiYogiLAB <span class="ph">[placeholder: legal entity]</span><br>Manasota Key, on Florida's Gulf Coast · DzogchenFlorida.com · ManasotaFortress.com · AiYogi.ai<br><span class="flinks"><a href="#top">Home</a> · <a href="#journey">The Process</a> · <a href="#oxygen">HBOT + SDT</a> · <a href="creation-story.html">Creation Story</a> · <a href="creation-story.html#founders">Founders Team</a> · <a href="#monastic">Monastic Care</a> · <a href="#passage">Conscious Passage</a> · <a href="#estate">The Estate</a> · <a href="#sister">Sister Centers</a> · <a href="#faq">FAQ</a> · <a href="#contact">Contact</a> · <a href="#signup">First Treatment</a></span><br><a class="wa" href="https://wa.me/61419700334" target="_blank" rel="noopener"><svg class="wa-ic" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.9-1.8-6 0-5.9 4.9-10.7 11-10.7S27 9.6 27 15.6s-4.9 10.8-11 10.8zm6-8c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2-.2.3-.9 1.1-1.1 1.3-.2.2-.4.3-.7.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6l-1.1-2.6c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4 .8.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp Jodie (Lead Concierge)</span></a> · Privacy · Terms <span class="ph">[placeholder]</span></p>
  <p class="footfounders">Founded by AiYogi · AiYogiLAB · ARDTiLYS, Prof. Dr. Xiaohuai Wang, Dr. Lucy Qing Li and Jodie Hooper <span class="ph">[placeholder: confirm founder list]</span></p>
  <p class="footline">SoSDT is offered as an integrative therapy; individual results vary.</p>
 </div></footer>
