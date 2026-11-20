@@ -322,7 +322,7 @@ footer .logo{margin-bottom:14px}
 /* interviews: hidden until INTERVIEW_VIDEOS has a real YouTube id */
 .interviews[hidden]{display:none!important}
 .interviews{background:radial-gradient(ellipse at center,#0E1433 0%,#040A10 70%)}
-.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}
+.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px;justify-content:center}.yt-grid:has(.yt-card:only-child){grid-template-columns:minmax(0,760px)}
 .yt-card{margin:0}
 .yt-facade{position:relative;display:block;width:100%;padding-bottom:56.25%;background:#0B2A35;border:1px solid #D4A24C55;cursor:pointer;overflow:hidden;color:inherit}
 .yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -407,7 +407,7 @@ footer .logo{margin-bottom:14px}
 <section class="interviews" id="interviews" hidden>
  <div class="wrap">
   <div class="center"><span class="eyebrow">Conversations</span><h2>Interviews</h2>
-  <p style="max-width:680px;margin:0 auto">Conversations with the people who shaped this work, to be added as they are published.</p></div>
+  <p style="max-width:680px;margin:0 auto">Conversations with the people who shaped this work.</p></div>
   <div class="yt-grid" id="yt-grid"></div>
  </div>
 </section>
@@ -502,7 +502,7 @@ addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy
 /* Drop in YouTube IDs to reveal the Conversations section. Leave the array empty to keep it hidden.
    Example: window.INTERVIEW_VIDEOS = [{ id: 'xxxxxxxxxxx', title: 'A conversation with …' }]; */
 window.INTERVIEW_VIDEOS = [
-  // { id: '', title: '' },
+  { id: 'u4s_qeF1OBI', title: 'SDT Ultrasound and Chlorophyll Vaporizes “Hungry Ghost” Cells / Tumors: Sonodynamic Therapy' },
 ];
 (function(){
   const valid = (window.INTERVIEW_VIDEOS||[]).filter(v => v && v.id && !/^X+$/i.test(v.id) && v.id !== 'YOUTUBE_ID' && v.id.trim());
@@ -554,7 +554,7 @@ window.INTERVIEW_VIDEOS = [
   document.querySelectorAll('img[data-k]').forEach(e=>e.src=IMG[e.dataset.k]);
   document.querySelectorAll('[data-img*="#img-"]').forEach(e=>e.dataset.img=R(e.dataset.img));
   document.querySelectorAll('video[poster*="#img-"]').forEach(e=>e.poster=R(e.getAttribute('poster')));
-  function applyVid(el){const k=el.dataset.vk;if(!k||!VID[k])return;el.src=VID[k];if(el.tagName==='SOURCE'){const v=el.parentElement;if(v&&v.tagName==='VIDEO')try{v.load()}catch(_){}}}
+  function applyVid(el){const k=el.dataset.vk;if(!k||!VID[k])return;const host=el.tagName==='SOURCE'?el.parentElement:el;const cur=(host&&(host.currentSrc||host.src)||el.src||'');if(cur.indexOf('data:video')===0)return;el.src=VID[k];if(el.tagName==='SOURCE'&&host&&host.tagName==='VIDEO'){try{host.load()}catch(_){}}}
   function loadVidJs(k,cb){if(VID[k]){cb();return}window.__vidLoading=window.__vidLoading||{};if(window.__vidLoading[k]){window.__vidLoading[k].push(cb);return}window.__vidLoading[k]=[cb];
     const s=document.createElement('script');s.src='img/'+k+'.js';
     s.onload=()=>{(window.__vidLoading[k]||[]).forEach(fn=>fn());window.__vidLoading[k]=null};
