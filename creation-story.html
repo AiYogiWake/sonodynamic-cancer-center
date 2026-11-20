@@ -536,7 +536,10 @@ window.INTERVIEW_VIDEOS = [
       f.title=v.title||'Interview';
       f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       f.allowFullscreen=true;
-      btn.replaceWith(f);
+      const box=document.createElement('div');
+      box.className='yt-facade is-playing';
+      box.appendChild(f);
+      btn.replaceWith(box);
     });
     const cap=document.createElement('figcaption');
     cap.textContent=v.title||'Interview';
