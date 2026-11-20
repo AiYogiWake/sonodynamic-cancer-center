@@ -750,7 +750,7 @@ addEventListener('scroll',spy,{passive:true});addEventListener('resize',spy);spy
   document.querySelectorAll('img[data-k]').forEach(e=>e.src=IMG[e.dataset.k]);
   document.querySelectorAll('[data-img*="#img-"]').forEach(e=>e.dataset.img=R(e.dataset.img));
   document.querySelectorAll('video[poster*="#img-"]').forEach(e=>e.poster=R(e.getAttribute('poster')));
-  function applyVid(el){const k=el.dataset.vk;if(!k||!VID[k])return;el.src=VID[k];if(el.tagName==='SOURCE'){const v=el.parentElement;if(v&&v.tagName==='VIDEO')try{v.load()}catch(_){}}}
+  function applyVid(el){const k=el.dataset.vk;if(!k||!VID[k])return;const host=el.tagName==='SOURCE'?el.parentElement:el;const cur=(host&&(host.currentSrc||host.src)||el.src||'');if(cur.indexOf('data:video')===0)return;el.src=VID[k];if(el.tagName==='SOURCE'&&host&&host.tagName==='VIDEO'){try{host.load()}catch(_){}}}
   function loadVidJs(k,cb){if(VID[k]){cb();return}window.__vidLoading=window.__vidLoading||{};if(window.__vidLoading[k]){window.__vidLoading[k].push(cb);return}window.__vidLoading[k]=[cb];
     const s=document.createElement('script');s.src='img/'+k+'.js';
     s.onload=()=>{(window.__vidLoading[k]||[]).forEach(fn=>fn());window.__vidLoading[k]=null};
