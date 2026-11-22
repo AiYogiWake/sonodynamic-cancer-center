@@ -457,13 +457,33 @@ html:not(.gated) #passgate{display:none!important}
 .fof-note .fof-k{font-family:Cinzel,serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--aqua);display:block;margin-bottom:12px}
 .fof-note p{font-size:19.5px;line-height:1.6;color:var(--parch);margin:0 0 .7em;font-style:italic}
 .fof-note .fof-sig{font-family:Cinzel,serif;font-style:normal;font-size:14px;letter-spacing:.16em;color:var(--gold);margin:6px 0 0}
+.fof-note .fof-more{margin-top:4px;border:0;padding:0}
+.fof-note .fof-more summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:6px 0;font-family:Cinzel,serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);border-radius:2px}
+.fof-note .fof-more summary::-webkit-details-marker{display:none}
+.fof-note .fof-more summary:hover .fof-more-l{color:var(--parch)}
+.fof-note .fof-more summary:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.fof-note .fof-more-x{position:relative;width:14px;height:14px;flex:0 0 14px}
+.fof-note .fof-more-x::before,.fof-note .fof-more-x::after{content:"";position:absolute;left:0;top:6.5px;width:14px;height:1px;background:var(--gold);transition:transform .35s ease}
+.fof-note .fof-more-x::after{transform:rotate(90deg)}
+.fof-note .fof-more[open] .fof-more-x::after{transform:rotate(0)}
+.fof-note .fof-more[open] summary .fof-more-l{font-size:0}
+.fof-note .fof-more[open] summary .fof-more-l::after{content:"Show less";font-size:12px}
+.fof-note .fof-more-b{padding-top:10px;border-top:1px solid #D4A24C33;margin-top:6px;animation:fofIn .45s ease}
+@keyframes fofIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fof-note .fof-more-b{animation:none}.fof-note .fof-more-x::after{transition:none}}
 @media (max-width:860px){.fof-note{padding:48px 0 16px}.fof-note .fof-card{padding:24px 22px}.fof-note p{font-size:18px}}
 </style>
  <div class="wrap"><div class="fof-card">
   <span class="fof-k">A note from Wake</span>
-  <p>Sharing an early-stage, radical new take on prostate, senescent-cell / longevity and tumor treatment: an experimental chlorophyll and ultrasound protocol. CEO Dr. Lucy has a machine they are seeking $100k for, to place in Seseh, Bali. It currently exists in only 3&#8211;5 centers, at $13&#8211;20k USD per 9-day round, in Switzerland, China / Hong Kong, and Jakarta.</p>
-  <p>This page is a sketch of the data, to be considered by friends Ian, Charlie, Klaus, Alex, and any friends who might deem it worthy. I don&#8217;t advocate it yet; I&#8217;m just sharing a potentially radical discovery and an idea for implementation.</p>
-  <p class="fof-sig">&#8212; Wake</p>
+  <p>Sharing an early-stage, radical new take on prostate, senescent-cell / longevity and tumor treatment: an experimental chlorophyll and ultrasound protocol.</p>
+  <details class="fof-more">
+   <summary><span class="fof-more-l">Read more</span><span class="fof-more-x" aria-hidden="true"></span></summary>
+   <div class="fof-more-b">
+    <p>CEO Dr. Lucy has a machine they are seeking $100k for, to place in Seseh, Bali. It currently exists in only 3&#8211;5 centers, at $13&#8211;20k USD per 9-day round, in Switzerland, China / Hong Kong, and Jakarta.</p>
+    <p>This page is a sketch of the data, to be considered by friends Ian, Charlie, Klaus, Alex, and any friends who might deem it worthy. I don&#8217;t advocate it yet; I&#8217;m just sharing a potentially radical discovery and an idea for implementation.</p>
+    <p class="fof-sig">&#8212; Wake</p>
+   </div>
+  </details>
  </div></div>
 </section>
 <section class="arrival" id="arrival">
